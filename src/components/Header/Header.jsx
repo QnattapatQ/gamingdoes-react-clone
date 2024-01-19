@@ -3,9 +3,9 @@ import TopBannerAds from './TopBanner'
 
 const Header = () => {
     return (
-        <div>
+        <div className='max-w-[1332px] w-full mx-auto'>
             <TopBannerAds/>
-            <div className='bg-red-500'>Header</div>
+            <div className='bg-red-500'>GamingDose</div>
         </div>
     )
 }
