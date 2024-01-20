@@ -1,11 +1,13 @@
 import ResponsiveSize from '../public/ResponsiveSize'
 import Header from './components/Header/Header'
+import TopBannerAds from './components/Header/TopBanner'
 
 function App() {
     return (
-        <div>
+        <>
+            <TopBannerAds/>
             <Header/>
-        </div> 
+        </> 
     )
 }
 
