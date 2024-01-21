@@ -12,7 +12,11 @@ export default {
       'xl': '992px',
       '2xl': '1200px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        'linear-blue': 'linear-gradient(268.05deg, #080E40 11.64%, #085DFF 111.07%)',
+      },
+    },
   },
   plugins: [],
 }
