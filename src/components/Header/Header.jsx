@@ -34,7 +34,7 @@ const Header = () => {
             <div className={`${stickyNav ? 'bg-gradient-to-l from-blue-900 to-blue-600 fixed top-0 left-0 right-0 py-3' : 'py-4'} px-4 w-full`}>
                 <div className='max-w-[1332px] w-full mx-auto'>
                     <div className='text-2xl w-full flex items-center justify-between'>
-                        <div>
+                        <div className='w-[160px]'>
                             <a href="#">
                                 <img className={`${stickyNav ? 'w-[120px]' : 'w-[160px]'} duration-300 ease-out`} src={Logo} alt="" />
                             </a>

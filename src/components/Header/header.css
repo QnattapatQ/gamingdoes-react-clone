@@ -1,0 +1,16 @@
+.social-wrapper {
+    transition: 0.3 ease-out;
+}
+
+a .social-option {
+    opacity: 1;
+}
+
+a .social-option:hover {
+    opacity: 1;
+}
+
+a .social-option:not(.social-option:hover) {
+    opacity: 0.25;
+}
+
