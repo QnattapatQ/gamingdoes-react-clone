@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Logo from '../../assets/images/logo_main.svg';
 import SearchBar from './SearchBar';
 import SocialList from './SocialList';
+import './header.css';
 
 const Header = () => {
 
@@ -21,7 +22,7 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener('scroll', resetScroll);
 
-        if(scrollDetail.scrollDetail >= 235) {
+        if(scrollDetail.scrollDetail >= 210) {
             setStickyNav(true);
         } else {
             setStickyNav(false);
@@ -31,7 +32,7 @@ const Header = () => {
 
     return (
         <div className='relative'>
-            <div className={`${stickyNav ? 'bg-gradient-to-l from-blue-900 to-blue-600 fixed top-0 left-0 right-0 py-3' : 'py-4'} px-4 w-full`}>
+            <div className={`${stickyNav ? 'bg-linear-blue fixed top-0 left-0 right-0 py-3' : 'py-4'} px-4 w-full`}>
                 <div className='max-w-[1332px] w-full mx-auto'>
                     <div className='text-2xl w-full flex items-center justify-between'>
                         <div className='w-[160px]'>

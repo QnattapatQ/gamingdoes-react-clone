@@ -21,6 +21,7 @@ const SocialList = () => {
             <div className='hidden max-2xl:block'>
                 <RxHamburgerMenu className='text-white text-5xl cursor-pointer'/>
             </div>
+            <MenuMobile/>
         </>
     )
 }
