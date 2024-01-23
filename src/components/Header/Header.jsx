@@ -36,12 +36,12 @@ const Header = () => {
                     <div className='text-2xl w-full flex items-center justify-between'>
                         <div className='w-[160px]'>
                             <a href="#">
-                                <img className={`${stickyNav ? 'w-[120px]' : 'w-[160px]'} duration-300 ease-out`} src={Logo} alt="" />
+                                <img className={`${stickyNav ? 'w-[120px] max-4xl:w-[120px] max-3xl:w-[120px] max-2xl:w-[120px] max-xl:w-[120px]' : 'w-[160px]'} min-w-[120px] max-lg:w-[120px] max-3xl:w-[130px] max-4xl:w-[140px] duration-300 ease-out`} src={Logo} alt="" />
                             </a>
                         </div>
-                        <div>
+                        <div className='max-2xl:hidden'>
                             <ul className='px-4'>
-                                <li className='flex gap-8'>
+                                <li className='flex duration-200 gap-8 max-3xl:gap-6'>
                                     <a className='uppercase text-white text-base font-medium' href="#">Latest</a>
                                     <a className='uppercase text-white text-base font-medium' href="#">News</a>
                                     <a className='uppercase text-white text-base font-medium' href="#">Read</a>
@@ -52,7 +52,7 @@ const Header = () => {
                         </div>
                         <div className='flex items-center'>
                             <SearchBar/>
-                            <SocialList/>
+                            <SocialList/> 
                         </div>
                     </div>
                 </div>

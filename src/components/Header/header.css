@@ -1,16 +1,19 @@
 .social-wrapper {
-    transition: 0.3 ease-out;
+    transition: opacity 0.2s ease-out;
+
+    > a {
+        transition: opacity 0.2s ease-out;
+    }
 }
 
-a .social-option {
+a:hover > .social-option {
+    transition: opacity 0.2s ease-out;
     opacity: 1;
 }
 
-a .social-option:hover {
-    opacity: 1;
-}
-
-a .social-option:not(.social-option:hover) {
+.social-wrapper:hover > a > .social-option:not(:hover) {
+    transition: opacity 0.2s ease-out;
     opacity: 0.25;
 }
+
 

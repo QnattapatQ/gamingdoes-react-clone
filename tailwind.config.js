@@ -11,6 +11,8 @@ export default {
       'lg': '768px',
       'xl': '992px',
       '2xl': '1200px',
+      '3xl': '1280px',
+      '4xl': '1440px',        
     },
     extend: {
       colors: {
