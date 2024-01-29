@@ -1,5 +1,4 @@
 import React from 'react'
-import ResponsiveSize from '../../../public/ResponsiveSize'
 
 const TopBannerAds = () => {
     return (
