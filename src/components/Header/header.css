@@ -40,4 +40,20 @@ a:hover > .social-option {
     width: 100%;
 }
 
+.menu-expand-list-2::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    width: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+.menu-expand-list-2:hover::after{
+    width: 100%;
+}
+
 

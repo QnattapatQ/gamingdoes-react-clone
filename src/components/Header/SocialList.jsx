@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaFacebook, FaYoutube, FaTiktok, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa6";
 import './header.css';
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -12,10 +12,12 @@ const SocialList = () => {
     return (
         <>
             <SocialMenu/>
-            <div className='hidden max-2xl:block'>
+            <div onClick={() => {setOpenMenu(!openMenu)}} className='hidden max-2xl:block'>
                 <RxHamburgerMenu className='text-white text-5xl cursor-pointer'/>
             </div>
-            <MenuMobile/>
+            <div>
+                <MenuMobile openMenu={openMenu} setOpenMenu={setOpenMenu}/>
+            </div>
         </>
     )
 }

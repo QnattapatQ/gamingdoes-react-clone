@@ -2,14 +2,17 @@ import React from 'react'
 import { IoMdClose } from "react-icons/io";
 import Logo from '../../assets/images/logo_main.svg';
 import './header.css';
+import { FaFacebook, FaYoutube, FaTiktok, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa6";
 import { SocialMenu } from './SocialMenu';
 
-const MenuMobile = () => {
+const MenuMobile = ({ openMenu, setOpenMenu }) => {
     return (
-        <div className='fixed inset-0 bg-[rgba(0,0,0,0.5)] '>
+        <div className={`${openMenu ? 'visible opacity-100' : 'opacity-0 invisible'} duration-300 fixed inset-0 bg-[rgba(0,0,0,0.5)]`} onClick={() => {setOpenMenu(!openMenu)}}>
             <div className='relative w-full h-full'>
-                <div className='bg-linear-soft-blue absolute right-0 top-0 bottom-0 w-[360px] px-10 py-20'>
-                    <div className='group/close absolute duration-300 top-6 right-6 border-2 border-white rounded-full p-1 opacity-[0.9] cursor-pointer hover:opacity-100'>
+                <div className={`${openMenu ? 'translate-x-[0%]' : 'translate-x-[100%] duration-300'} duration-300 bg-linear-soft-blue absolute right-0 top-0 bottom-0 w-[360px] px-10 py-20 max-md:w-full`}>
+                    <div className='group/close absolute duration-300 top-6 right-6 border-2 border-white rounded-full p-1 opacity-[0.9] cursor-pointer hover:opacity-100'
+                        onClick={() => {setOpenMenu(!openMenu)}}
+                    >
                         <IoMdClose className='group-hover/close:rotate-90 duration-300 text-white text-[30px]'/>
                     </div>
                     <div>
@@ -23,13 +26,21 @@ const MenuMobile = () => {
                             <li><a className='menu-expand-list relative uppercase text-white' href="#">Watch</a></li>
                         </ul>
                         <ul className='text-[18px] flex flex-col mt-8 font-medium'>
-                            <li><a className='menu-expand-list relative uppercase text-white' href="#">About</a></li>
-                            <li><a className='menu-expand-list relative uppercase text-white' href="#">Advertise</a></li>
-                            <li><a className='menu-expand-list relative uppercase text-white' href="#">Careers</a></li>
-                            <li><a className='menu-expand-list relative uppercase text-white' href="#">Contact</a></li>
+                            <li><a className='menu-expand-list-2 relative uppercase text-white text-sm' href="#">About</a></li>
+                            <li><a className='menu-expand-list-2 relative uppercase text-white text-sm' href="#">Advertise</a></li>
+                            <li><a className='menu-expand-list-2 relative uppercase text-white text-sm' href="#">Careers</a></li>
+                            <li><a className='menu-expand-list-2 relative uppercase text-white text-sm' href="#">Contact</a></li>
                         </ul>
-                        <div>
-                            <SocialMenu/>
+                        <div className='mt-12'>
+                            <a className='duration-200 text-gray-300 hover:text-white text-base' href="#">gene@gamingdose.com</a>
+                            <div className='social-wrapper flex items-center justify-center gap-3 w-[220px] mt-6'>
+                                <a className='text-white inline-block w-full' href="#"><FaFacebook className='social-option text-[30px]'/></a>
+                                <a className='text-white inline-block w-full' href="#"><FaYoutube className='social-option text-[30px]'/></a>
+                                <a className='text-white inline-block w-full' href="#"><FaTiktok className='social-option text-[30px]'/></a>
+                                <a className='text-white inline-block w-full' href="#"><FaInstagram className='social-option text-[30px]'/></a>
+                                <a className='text-white inline-block w-full' href="#"><FaTwitter className='social-option text-[30px]'/></a>
+                                <a className='text-white inline-block w-full' href="#"><FaDiscord className='social-option text-[30px]'/></a>
+                            </div>
                         </div>
                     </div>
                 </div>
