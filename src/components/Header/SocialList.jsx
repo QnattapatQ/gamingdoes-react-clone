@@ -13,7 +13,7 @@ const SocialList = () => {
         <>
             <SocialMenu/>
             <div onClick={() => {setOpenMenu(!openMenu)}} className='hidden max-2xl:block'>
-                <RxHamburgerMenu className='text-white text-5xl cursor-pointer'/>
+                <RxHamburgerMenu className='text-white text-5xl cursor-pointer max-sm:text-4xl max-lg:text-[40px]'/>
             </div>
             <div>
                 <MenuMobile openMenu={openMenu} setOpenMenu={setOpenMenu}/>

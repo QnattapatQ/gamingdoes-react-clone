@@ -3,9 +3,34 @@ import { IoMdClose } from "react-icons/io";
 import Logo from '../../assets/images/logo_main.svg';
 import './header.css';
 import { FaFacebook, FaYoutube, FaTiktok, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa6";
-import { SocialMenu } from './SocialMenu';
+import { useState, useEffect } from 'react';
 
 const MenuMobile = ({ openMenu, setOpenMenu }) => {
+
+    const [desktopSize, setDesktopSize] = useState({
+        winWidth: window.innerWidth
+    })
+
+    const detechSize = () => {
+        setDesktopSize({
+            winWidth: window.innerWidth
+        })
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', detechSize);
+
+
+        if(desktopSize.winWidth >= 1200){
+            setOpenMenu(false);
+        }
+
+        return () => {
+            window.removeEventListener('resize', detechSize);
+        }
+
+    },[desktopSize]);
+
     return (
         <div className={`${openMenu ? 'visible opacity-100' : 'opacity-0 invisible'} duration-300 fixed inset-0 bg-[rgba(0,0,0,0.5)]`} onClick={() => {setOpenMenu(!openMenu)}}>
             <div className='relative w-full h-full'>
