@@ -22,7 +22,7 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener('scroll', resetScroll);
 
-        if(scrollDetail.scrollDetail >= 210) {
+        if(scrollDetail.scrollDetail >= 399) {
             setStickyNav(true);
         } else {
             setStickyNav(false);
@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <div className='relative'>
-            <div className={`${stickyNav ? 'bg-linear-blue fixed top-0 left-0 right-0 py-3' : 'py-4'} px-4 w-full`}>
+            <div className={`${stickyNav ? 'bg-linear-blue fixed top-0 left-0 right-0 py-3' : 'py-4 absolute'} px-4 w-full`}>
                 <div className='max-w-[1332px] w-full mx-auto'>
                     <div className='text-2xl w-full flex items-center justify-between gap-4'>
                         <div className='w-[160px]'>
