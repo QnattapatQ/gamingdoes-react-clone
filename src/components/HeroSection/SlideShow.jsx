@@ -8,6 +8,8 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './style.css'
+import slideContent from '../../../public/slide-content';
+
 
 const SlideShow = () => {
     return (
@@ -22,10 +24,17 @@ const SlideShow = () => {
                 navigation={true}
                 className='h-full'
             >
-                <SwiperSlide className='bg-green-500'>Slide 1</SwiperSlide>
-                <SwiperSlide className='bg-green-400'>Slide 2</SwiperSlide>
-                <SwiperSlide className='bg-green-300'>Slide 3</SwiperSlide>
-                <SwiperSlide className='bg-green-200'>Slide 4</SwiperSlide>
+                {slideContent.map((data) => (
+                    <SwiperSlide key={data.id}>
+                        <div className='w-full h-full relative'>
+                            <div className='absolute bg-blue-linear inset-0'></div>
+                            <div className='absolute pt-[60px] pl-[60px] w-[58%]'>
+                                <h2 className='text-[40px] font-semibold'>{data.textContent}</h2>
+                            </div>
+                            <img className='h-full w-full' src={data.img} alt="" />
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     )
