@@ -10,6 +10,7 @@ function App() {
             <BackdropBG/>
             <TopBannerAds/>
             <Header/>
+            <HeroSection/>
         </div> 
     )
 }

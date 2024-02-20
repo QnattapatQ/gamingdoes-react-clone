@@ -13,7 +13,7 @@ import slideContent from '../../../public/slide-content';
 
 const SlideShow = () => {
     return (
-        <div className='h-full z-[20]'>
+        <div className='h-full'>
             <Swiper
                 modules={[Autoplay, Navigation]}
                 slidesPerView={1}
@@ -28,10 +28,24 @@ const SlideShow = () => {
                     <SwiperSlide key={data.id}>
                         <div className='w-full h-full relative'>
                             <div className='absolute bg-blue-linear inset-0'></div>
-                            <div className='absolute pt-[60px] pl-[60px] w-[58%]'>
-                                <h2 className='text-[40px] font-semibold'>{data.textContent}</h2>
+                            <div className='h-full max-lg:flex max-lg:flex-col'>
+                                <div>
+                                    <div className='absolute z-1 flex justify-center items-center gap-4 top-3 left-0 pl-[60px] max-2xl:pl-[40px]'>
+                                        <div className='inline-block z-1'>
+                                            <a className='text-[10px]' href="#">{data.tag.tag1}</a>
+                                        </div>
+                                        <div className='inline-block z-1'>
+                                            <a className='text-[10px]' href="#">{data.tag.tag2}</a>
+                                        </div>
+                                    </div>
+                                    <div className='absolute pt-[60px] pl-[60px] w-[58%] max-2xl:pl-[40px]'>
+                                        <h2 className='text-[40px] font-semibold max-2xl:text-[28px]'>{data.textContent}</h2>
+                                    </div>
+                                </div>
+                                <div className='w-full h-full'>
+                                    <img className='h-full w-full object-cover' src={data.img} alt="" />
+                                </div>
                             </div>
-                            <img className='h-full w-full' src={data.img} alt="" />
                         </div>
                     </SwiperSlide>
                 ))}
