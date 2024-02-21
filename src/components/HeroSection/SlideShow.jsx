@@ -26,10 +26,10 @@ const SlideShow = () => {
             >
                 {slideContent.map((data) => (
                     <SwiperSlide key={data.id}>
-                        <div className='w-full h-full relative'>
+                        <div className='w-full h-full relative bg-red-500'>
                             <div className='absolute bg-blue-linear inset-0 max-lg:hidden'></div>
-                            <div className=''>
-                                <div className='h-full'>
+                            <div className='h-full'>
+                                <div>
                                     <div className='absolute z-1 flex justify-center items-center gap-4 top-3 left-0 pl-[60px] max-2xl:pl-[40px]'>
                                         <div className='inline-block z-1'>
                                             <a className='text-[10px]' href="#">{data.tag.tag1}</a>
