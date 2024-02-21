@@ -1,6 +1,10 @@
-.swiper-button-prev, .swiper-button-next {
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;500;600&display=swap');
+
+
+.txt-mitr {
+    font-family: "Mitr";
 }
+
 
 .bg-blue-linear {
     background: linear-gradient(155deg, #121D76 21.3%, rgba(18, 29, 118, 0) 55.38%);
