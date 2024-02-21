@@ -27,9 +27,9 @@ const SlideShow = () => {
                 {slideContent.map((data) => (
                     <SwiperSlide key={data.id}>
                         <div className='w-full h-full relative'>
-                            <div className='absolute bg-blue-linear inset-0'></div>
-                            <div className='h-full max-lg:flex max-lg:flex-col'>
-                                <div>
+                            <div className='absolute bg-blue-linear inset-0 max-lg:hidden'></div>
+                            <div className=''>
+                                <div className='h-full'>
                                     <div className='absolute z-1 flex justify-center items-center gap-4 top-3 left-0 pl-[60px] max-2xl:pl-[40px]'>
                                         <div className='inline-block z-1'>
                                             <a className='text-[10px]' href="#">{data.tag.tag1}</a>
@@ -38,7 +38,7 @@ const SlideShow = () => {
                                             <a className='text-[10px]' href="#">{data.tag.tag2}</a>
                                         </div>
                                     </div>
-                                    <div className='absolute pt-[60px] pl-[60px] w-[58%] max-2xl:pl-[40px]'>
+                                    <div className='absolute pt-[60px] pl-[60px] w-[58%] max-2xl:pl-[40px] max-lg:static max-lg:w-full'>
                                         <h2 className='text-[40px] font-semibold max-2xl:text-[28px]'>{data.textContent}</h2>
                                     </div>
                                 </div>
