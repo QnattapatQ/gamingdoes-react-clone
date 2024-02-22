@@ -49,9 +49,9 @@ const SlideShow = () => {
                         </div>
                     </SwiperSlide>
                 ))}
-                {/* <div className='absolute right-0 bottom-10'>
-                    <div class="swiper-button-prev prev"></div>
-                    <div class="swiper-button-next next"></div>
+                {/* <div className='absolute right-0 top-1/2 w-full h-full'>
+                    <div class="swiper-button-prev" ></div>
+                    <div class="swiper-button-next"></div>
                 </div> */}
             </Swiper>
         </div>

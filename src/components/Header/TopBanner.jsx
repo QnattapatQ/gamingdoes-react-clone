@@ -6,22 +6,22 @@ const TopBannerAds = () => {
             <div className='grid grid-cols-2 w-full mb-8 gap-4 p-4 border-solid border-[0.5px] border-gray-400 bg-gray-400 backdrop-filter backdrop-blur-md bg-opacity-30 max-lg:grid-cols-1'>
                 <div>
                     <a href="#">
-                        <img className='h-full w-full' src="https://www.gamingdose.com/wp-content/uploads/2024/01/1120x250-2.jpg" alt="" />
+                        <img className='h-full w-full' src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_header01.jpg" alt="" />
                     </a>
                 </div>
                 <div>
                     <a href="#">
-                        <img className='h-full w-full' src="https://www.gamingdose.com/wp-content/uploads/2023/03/577x128-2-2.jpg" alt="" />
+                        <img className='h-full w-full' src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_header02.jpg" alt="" />
                     </a>
                 </div>
                 <div>
                     <a href="#">
-                        <img className='h-full w-full' src="https://www.gamingdose.com/wp-content/uploads/2024/01/1120x250-2.jpg" alt="" />
+                        <img className='h-full w-full' src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_header03.jpg" alt="" />
                     </a>
                 </div>
                 <div>
                     <a href="#">
-                        <img className='h-full w-full' src="https://www.gamingdose.com/wp-content/uploads/2023/03/577x128-2-2.jpg" alt="" />
+                        <img className='h-full w-full' src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_header04.jpg" alt="" />
                     </a>
                 </div>
 

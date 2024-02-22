@@ -5,6 +5,13 @@
     font-family: "Mitr";
 }
 
+.swiper-button-prev {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 
 .bg-blue-linear {
     background: linear-gradient(155deg, #121D76 21.3%, rgba(18, 29, 118, 0) 55.38%);
