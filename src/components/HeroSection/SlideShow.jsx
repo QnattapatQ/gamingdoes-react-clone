@@ -2,11 +2,12 @@
 import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
 
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './style.css'
 import slideContent from '../../../public/slide-content';
 
@@ -15,14 +16,15 @@ const SlideShow = () => {
     return (
         <div className='h-full'>
             <Swiper
-                modules={[Autoplay, Navigation]}
+                modules={[Autoplay, Navigation, Pagination]}
                 slidesPerView={1}
                 autoplay={{
                     delay: 4000,
                 }}
+                pagination={true}
                 speed={500}
                 navigation={true}
-                className='h-full w-full relative'
+                className='mySwiper h-full w-full relative'
             >
                 {slideContent.map((data) => (
                     <SwiperSlide key={data.id}>

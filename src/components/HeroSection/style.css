@@ -5,11 +5,32 @@
     font-family: "Mitr";
 }
 
-.swiper-button-prev {
+.swiper-button-prev, .swiper-button-next {
     color: white;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    height: 100%;
+    width: 100%;
+    scale: 0.7;
+}
+
+.swiper-button-prev {
+    transform: translate(45%, -5%);
+}
+
+.swiper-button-next {
+    transform: translate(60%, -5%);
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    border: 1px solid white;
+    opacity: 1;
+    outline: none;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: white;
 }
 
 
