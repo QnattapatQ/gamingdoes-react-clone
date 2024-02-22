@@ -13,6 +13,7 @@ import slideContent from '../../../public/slide-content';
 
 
 const SlideShow = () => {
+
     return (
         <div className='h-full'>
             <Swiper
@@ -51,10 +52,6 @@ const SlideShow = () => {
                         </div>
                     </SwiperSlide>
                 ))}
-                {/* <div className='absolute right-0 top-1/2 w-full h-full'>
-                    <div class="swiper-button-prev" ></div>
-                    <div class="swiper-button-next"></div>
-                </div> */}
             </Swiper>
         </div>
     )
