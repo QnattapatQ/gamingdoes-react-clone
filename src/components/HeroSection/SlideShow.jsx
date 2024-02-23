@@ -3,6 +3,7 @@ import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { useSwiper } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,22 +11,36 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './style.css'
 import slideContent from '../../../public/slide-content';
+import SwiperNavButton from './SwiperNavButton';
+import { useEffect, useState } from 'react';
 
 
 const SlideShow = () => {
 
+    const [curentIndexOfSlide, setCurrentIndexOfSlide] = useState(0); // State รับค่า Index จาก Slide ปัจจุบัน
+
+    const handleSlideChange = (swiper) => {
+        setCurrentIndexOfSlide(swiper.realIndex)
+    }
+
+    // useEffect(() => {
+    //     console.log(curentIndexOfSlide)
+    // },[curentIndexOfSlide]);
+
+
     return (
-        <div className='h-full'>
+        <div className='h-full relative'>
             <Swiper
-                modules={[Autoplay, Navigation, Pagination]}
+                modules={[Autoplay, Pagination]}
                 slidesPerView={1}
                 autoplay={{
                     delay: 4000,
                 }}
                 pagination={true}
                 speed={500}
-                navigation={true}
+                onSlideChange={handleSlideChange}
                 className='mySwiper h-full w-full relative'
+
             >
                 {slideContent.map((data) => (
                     <SwiperSlide key={data.id}>
@@ -52,7 +67,11 @@ const SlideShow = () => {
                         </div>
                     </SwiperSlide>
                 ))}
+                <SwiperNavButton currentIndex={curentIndexOfSlide}/>
             </Swiper>
+            {/* <div className='absolute p-5 bg-red-500 right-0 w-[200px] bottom-[10%] z-[2]'>
+
+            </div> */}
         </div>
     )
 }
