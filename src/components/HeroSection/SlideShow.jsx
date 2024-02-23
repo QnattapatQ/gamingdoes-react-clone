@@ -2,8 +2,7 @@
 import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
 
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { useSwiper } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,7 +14,7 @@ import SwiperNavButton from './SwiperNavButton';
 import { useEffect, useState } from 'react';
 
 
-const SlideShow = () => {
+const SlideShow = ({ getIndex }) => {
 
     const [curentIndexOfSlide, setCurrentIndexOfSlide] = useState(0); // State รับค่า Index จาก Slide ปัจจุบัน
 
@@ -23,10 +22,9 @@ const SlideShow = () => {
         setCurrentIndexOfSlide(swiper.realIndex)
     }
 
-    // useEffect(() => {
-    //     console.log(curentIndexOfSlide)
-    // },[curentIndexOfSlide]);
-
+    useEffect(() => {
+        getIndex(curentIndexOfSlide)
+    },[curentIndexOfSlide]);
 
     return (
         <div className='h-full relative'>
@@ -36,7 +34,9 @@ const SlideShow = () => {
                 autoplay={{
                     delay: 4000,
                 }}
-                pagination={true}
+                pagination={{
+                    clickable: true,
+                }}
                 speed={500}
                 onSlideChange={handleSlideChange}
                 className='mySwiper h-full w-full relative'
@@ -44,7 +44,7 @@ const SlideShow = () => {
             >
                 {slideContent.map((data) => (
                     <SwiperSlide key={data.id}>
-                        <div className='w-full h-full relative bg-red-500'>
+                        <div className='w-full h-full relative'>
                             <div className='absolute bg-blue-linear inset-0 max-lg:hidden'></div>
                             <div className='h-full max-lg:flex max-lg:justify-between max-lg:flex-col max-lg:gap-4'>
                                 <div className='max-lg:h-full'>
@@ -69,9 +69,6 @@ const SlideShow = () => {
                 ))}
                 <SwiperNavButton currentIndex={curentIndexOfSlide}/>
             </Swiper>
-            {/* <div className='absolute p-5 bg-red-500 right-0 w-[200px] bottom-[10%] z-[2]'>
-
-            </div> */}
         </div>
     )
 }

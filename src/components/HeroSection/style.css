@@ -27,6 +27,7 @@
     border: 1px solid white;
     opacity: 1;
     outline: none;
+    cursor: pointer;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
