@@ -8,7 +8,7 @@ const slideContent = [
         id : 0,
         tag : {
             tag1 : 'Feature',
-            tag2 : 'By Person 1'
+            tag2 : 'Person 1'
         },
         textContent : 'Blizzard มีความสนใจอยากเห็น Overwatch 2 จัดอีเวนต์ Crossover ร่วมกับแบรนด์อื่น เหมือน Fortnite',
         img : img1,
@@ -17,7 +17,7 @@ const slideContent = [
         id : 1,
         tag : {
             tag1 : 'Feature',
-            tag2 : 'By Person 2'
+            tag2 : 'Person 2'
         },
         textContent : 'EA แจก The Sims 4 ให้ทุกคนแบบฟรี ๆ กันแล้วตั้งแต่วันนี้',
         img : img2,
@@ -26,7 +26,7 @@ const slideContent = [
         id : 2,
         tag : {
             tag1 : 'Feature',
-            tag2 : 'By Person 3'
+            tag2 : 'Person 3'
         },
         textContent : 'EA Motive เตรียมเผยตัวอย่างเกมเพลย์ของ Dead Space Remake วันที่ 4 ตุลาคมนี้',
         img : img3,
@@ -35,7 +35,7 @@ const slideContent = [
         id : 3,
         tag : {
             tag1 : 'Feature',
-            tag2 : 'By Person 4'
+            tag2 : 'Person 4'
         },
         textContent : 'แนะนำ Trombone Champ เกมดนตรีฮา ๆ แสดงจิตวิญญาณ ผ่านเสียงทรอมโบนสุดปั่น',
         img : img4,
