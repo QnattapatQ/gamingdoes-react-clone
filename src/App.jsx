@@ -3,6 +3,7 @@ import BackdropBG from './components/BackdropBG/BackdropBG'
 import Header from './components/Header/Header'
 import TopBannerAds from './components/Header/TopBanner'
 import HeroSection from './components/HeroSection/HeroSection'
+import Trending from './components/Trending/Trending'
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <TopBannerAds/>
             <Header/>
             <HeroSection/>
+            <Trending/>
         </div> 
     )
 }
