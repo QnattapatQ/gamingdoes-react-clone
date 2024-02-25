@@ -13,6 +13,16 @@ const Header = () => {
         scrollDetail: window.scrollY
     })
 
+    const [desktopSize, setDesktopSize] = useState({
+        winWidth: window.innerWidth
+    })
+
+    const detechSize = () => {
+        setDesktopSize({
+            winWidth: window.innerWidth
+        })
+    }
+
     const resetScroll = () => {
         setScrollDetail({
             scrollDetail: window.scrollY
@@ -28,7 +38,31 @@ const Header = () => {
             setStickyNav(false);
         }
 
+        // if(desktopSize.winWidth < 1200) {
+        //     if(scrollDetail.scrollDetail >= 320) {
+        //         setStickyNav(true);
+        //     } else {
+        //         setStickyNav(false);
+        //     }
+        // } else if (desktopSize.winWidth <= 1040 && desktopSize.winWidth >= 1040) {
+        //     if(scrollDetail.scrollDetail >= 299) {
+        //         setStickyNav(true);
+        //     } else {
+        //         setStickyNav(false);
+        //     }
+        // }
+
     },[scrollDetail])
+
+    useEffect(() => {
+        window.addEventListener('resize', detechSize);
+
+        return () => {
+            window.removeEventListener('resize', detechSize);
+        }
+    }, [desktopSize]);
+
+
 
     return (
         <div className='relative z-20'>
