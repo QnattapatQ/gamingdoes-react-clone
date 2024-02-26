@@ -18,7 +18,7 @@ const SlideShow = ({ getIndex }) => {
 
     const [curentIndexOfSlide, setCurrentIndexOfSlide] = useState(0); // State รับค่า Index จาก Slide ปัจจุบัน
 
-    const handleSlideChange = (swiper) => {
+    const handleSlideChange = (swiper) => {  // function สำหรับรับต่า index ของ slide ปัจจุบัน
         setCurrentIndexOfSlide(swiper.realIndex)
     }
 

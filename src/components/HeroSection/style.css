@@ -13,10 +13,9 @@
 .swiper-pagination {
     text-align: right;
     max-width: calc(100% - 140px);
-    
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     height: calc(100% - 85%);
 }
 
