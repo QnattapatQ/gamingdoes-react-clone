@@ -22,15 +22,15 @@ export const TrendingSwiper = () => {
     return (
         <div className='w-full'>
             <Swiper
-                slidesPerView={trendingTag.length}
-                spaceBetween={15}
+                slidesPerView={'auto'}
+                spaceBetween={5}
                 modules={[FreeMode]}
                 freeMode={true}
-                className='mySwiper h-full relative bg-green-500'>
+                className='mySwiper w-auto h-full pr-10'>
                 {trendingTag.map((data) => (
-                    <SwiperSlide key={data} className='w-auto'>
-                        <div className='bg-red-500 text-center'>
-                            <a href="#" className='text-white'>{data}</a>
+                    <SwiperSlide key={data} className='w-auto overflow-hidden'>
+                        <div className='border bg-[rgba(255_255_255_/_10%)] hover:bg-[rgba(255_255_255_/_20%)] border-[rgba(255_255_255_/_20%)] rounded-full overflow-hidden'>
+                            <a href="#" className='text-white font-semibold py-[5px] px-4'>{data}</a>
                         </div> 
                     </SwiperSlide>
                 ))}
