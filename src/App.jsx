@@ -3,7 +3,11 @@ import BackdropBG from './components/BackdropBG/BackdropBG'
 import Header from './components/Header/Header'
 import TopBannerAds from './components/Header/TopBanner'
 import HeroSection from './components/HeroSection/HeroSection'
+<<<<<<< HEAD
 import PopularNews from './components/PopularNews/PopularNews'
+=======
+import PopularSection from './components/Popular/PopularSection'
+>>>>>>> 9be5421 (update)
 import Trending from './components/Trending/Trending'
 
 function App() {
@@ -13,7 +17,11 @@ function App() {
             <Header/>
             <HeroSection/>
             <Trending/>
+<<<<<<< HEAD
             <PopularNews/>
+=======
+            <PopularSection/>
+>>>>>>> 9be5421 (update)
         </div> 
     )
 }
