@@ -25,7 +25,10 @@ const PopularSection = () => {
                         {popularContent.map((data, index) => (
                             <SwiperSlide key={index} className='w-auto overflow-hidden'>
                                 <div>
-                                    <img src={data.img} alt="" />    
+                                    <img src={data.img} alt="" />
+                                    <div>
+                                        <p>{data.textContent}</p>    
+                                    </div>    
                                 </div> 
                             </SwiperSlide>
                         ))}
