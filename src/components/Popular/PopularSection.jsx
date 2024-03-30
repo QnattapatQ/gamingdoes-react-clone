@@ -27,7 +27,8 @@ const PopularSection = () => {
                                 <div>
                                     <img src={data.img} alt="" />
                                     <div>
-                                        <p>{data.textContent}</p>    
+                                        <p>{data.textContent}</p>
+                                        <p>{data.views}</p>    
                                     </div>    
                                 </div> 
                             </SwiperSlide>
