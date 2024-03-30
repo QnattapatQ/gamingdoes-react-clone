@@ -14,21 +14,27 @@ const PopularSection = () => {
                 <div>
                     <h2 className='font-bold text-transparent uppercase text-xl bg-main-blue-linear bg-clip-text w-fit'>THIS WEEK'S POPULAR</h2>
                 </div>
-                <div>
+                <div className='mt-8'>
                     <Swiper
                         slidesPerView={'auto'}
                         spaceBetween={5}
                         modules={[FreeMode]}
                         freeMode={true}
-                        className='mySwiper'
+                        className='mySwiper w-auto h-full'
                     >
                         {popularContent.map((data, index) => (
                             <SwiperSlide key={index} className='w-auto overflow-hidden'>
-                                <div>
-                                    <img src={data.img} alt="" />
-                                    <div>
-                                        <p>{data.textContent}</p>
-                                        <p>{data.views}</p>    
+                                <div className='bg-red-500 w-fit'>
+                                    <div className='w-[250px] h-[150px]'>
+                                        <img src={data.img} alt="" />
+                                    </div>
+                                    <div className='flex'>
+                                        <div className='basis-[60%]'>
+                                            <p className='line-clamp-3'>{data.textContent}</p>
+                                        </div>
+                                        <div className='basis-[40%]'>
+                                            <p>{index + 1}</p>    
+                                        </div>
                                     </div>    
                                 </div> 
                             </SwiperSlide>
