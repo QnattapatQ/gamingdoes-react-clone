@@ -11,7 +11,7 @@ const PopularSection = () => {
     return (
         <div className='bg-white py-16 border-b-2'>
             <div className='max-w-[1332px] mx-auto'>
-                <div>
+                <div className='px-[70px] max-2xl:px-10'>
                     <h2 className='font-bold text-transparent uppercase text-xl bg-main-blue-linear bg-clip-text w-fit'>THIS WEEK'S POPULAR</h2>
                 </div>
                 <div className='mt-8'>
@@ -33,7 +33,7 @@ const PopularSection = () => {
                         className='mySwiper w-auto h-full pt-2 px-[70px] max-2xl:px-10'
                     >
                         {popularContent.map((data, index) => (
-                            <SwiperSlide key={index} className='max-w-[250px] min-w-[150px] w-full '>
+                            <SwiperSlide key={index} className='max-w-[250px] min-w-[200px] w-full '>
                                 <div className='relative'>
                                     <div className= 'absolute -top-2 -right-4'>
                                         <img className=' w-[50px] h-[50px]' src={data.boxImg} alt="" />
@@ -41,20 +41,20 @@ const PopularSection = () => {
                                     </div>
                                     <div className='z-[3]'>
                                         <a href="#">
-                                            <img className='w-full h-full object-cover' src={data.img} alt="" />
+                                            <img className='' src={data.img} alt="" />
                                         </a>
                                     </div>
                                     <div className='flex mt-4 overflow-hidden'>
-                                        <div className='basis-[60%] h-full relative'>
+                                        <div className='basis-[60%] h-full relative max-xl:basis-[70%]'>
                                             <a href="#" className='hover:text-main-blue'>
-                                                <h2 className='line-clamp-3 text-md font-prompt text-base font-medium'>{data.textContent}</h2>
+                                                <h2 className='line-clamp-3 text-md font-prompt text-base max-xl:text-sm font-medium'>{data.textContent}</h2>
                                             </a>
                                             <div className='mt-3 flex gap-4'>
                                                 <a className='text-[10px] text-main-blue' href="#">BY {data.ref}</a>
                                                 <a className='text-[10px] text-main-blue decoration-dashed' href="#">NEWS</a>
                                             </div>
                                         </div>
-                                        <div className='basis-[40%] text-center text-[90px] font-bold relative h-full -top-10 text-main-blue z-[-2]'>
+                                        <div className='basis-[40%] max-xl:basis-[30%] text-center text-[90px] font-bold relative h-full -top-10 text-main-blue z-[-2] max-xl:text-[60px] max-xl:-top-5'>
                                             {index + 1}
                                         </div>
                                     </div>    
