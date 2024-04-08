@@ -9,7 +9,7 @@ import popularContent from './popular-section.js';
 
 const PopularSection = () => {
     return (
-        <div className='bg-white py-16 border-b-2'>
+        <div className='bg-white pt-16 pb-6 max-xl:pb-16 border-b-2'>
             <div className='max-w-[1332px] mx-auto'>
                 <div className='px-[70px] max-2xl:px-10'>
                     <h2 className='font-bold text-transparent uppercase text-xl bg-main-blue-linear bg-clip-text w-fit'>THIS WEEK'S POPULAR</h2>
@@ -30,13 +30,13 @@ const PopularSection = () => {
                                 spaceBetween: 40,
                             }
                         }}
-                        className='mySwiper w-auto h-full pt-2 px-[70px] max-2xl:px-10'
+                        className='mySwiper w-auto pt-2 px-[70px] max-2xl:px-10'
                     >
                         {popularContent.map((data, index) => (
-                            <SwiperSlide key={index} className='max-w-[250px] min-w-[200px] w-full '>
+                            <SwiperSlide key={index} className='max-w-[250px] min-w-[200px] w-full'>
                                 <div className='relative'>
                                     <div className= 'absolute -top-2 -right-4'>
-                                        <img className=' w-[50px] h-[50px]' src={data.boxImg} alt="" />
+                                        <img className='w-[50px] h-[50px]' src={data.boxImg} alt="" />
                                         <p className='absolute text-[13px] top-[6px] text-center leading-[12px] text-main-blue'><span className='font-semibold'>{data.views}</span> views</p>
                                     </div>
                                     <div className='z-[3]'>
@@ -45,7 +45,7 @@ const PopularSection = () => {
                                         </a>
                                     </div>
                                     <div className='flex mt-4 overflow-hidden'>
-                                        <div className='basis-[60%] h-full relative max-xl:basis-[70%]'>
+                                        <div className='relative pr-4'>
                                             <a href="#" className='hover:text-main-blue'>
                                                 <h2 className='line-clamp-3 text-md font-prompt text-base max-xl:text-sm font-medium'>{data.textContent}</h2>
                                             </a>
@@ -54,7 +54,7 @@ const PopularSection = () => {
                                                 <a className='text-[10px] text-main-blue decoration-dashed' href="#">NEWS</a>
                                             </div>
                                         </div>
-                                        <div className='basis-[40%] max-xl:basis-[30%] text-center text-[90px] font-bold relative h-full -top-10 text-main-blue z-[-2] max-xl:text-[60px] max-xl:-top-5'>
+                                        <div className='w-[25%] basis-auto text-center text-[90px] font-bold relative h-full -top-10 text-main-blue z-[-2] max-xl:text-[60px] max-xl:-top-5'>
                                             {index + 1}
                                         </div>
                                     </div>    
