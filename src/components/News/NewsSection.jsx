@@ -8,7 +8,7 @@ const NewsSection = () => {
                 <div className='grid grid-cols-[1fr_332px] px-[70px] max-2xl:px-10'>
                     <div className='border-r-2 py-16'>
                         <div className='flex items-start justify-stretch'>
-                            <div className='w-[75%] basis-auto mr-8 bg-green-500'>
+                            <div className='w-[75%] basis-auto mr-8'>
                                 <div className=''>
                                     <h2 className='font-bold text-transparent uppercase text-4xl bg-main-blue-linear bg-clip-text w-fit'>NEWS</h2>
                                 </div>  
@@ -16,7 +16,7 @@ const NewsSection = () => {
                                     <NewsList/>
                                 </div>
                             </div>
-                            <div className='w-[25%] basis-auto bg-green-400'>
+                            <div className='w-[25%] basis-auto'>
                                 asdasd
                             </div>
                         </div>   

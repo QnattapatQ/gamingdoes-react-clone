@@ -15,13 +15,13 @@ const NewsList = () => {
                             <h2 className='text-xl font-semibold hover:text-main-blue'>Overwatch 2 เตรียมเปิดให้เล่นแบบ Free-to-play ในวันที่ 5 ตุลาคมนี้ เวลา 02:00 น.</h2>
                         </a>
                         <div className='flex items-center justify-start gap-4 mt-4'>
-                            <div className='text-xs text-main-blue'>
+                            <div className='text-[10px] text-main-blue'>
                                 BY <a href="#">KMUTT</a>
                             </div>
-                            <div className='text-xs text-main-blue'>
+                            <div className='text-[10px] text-main-blue'>
                                 <a href="#">NEWS</a>
                             </div>
-                            <div>
+                            <div className='text-[10px] text-gray-400'>
                                 1 MINUTE AGO
                             </div>
                         </div>
