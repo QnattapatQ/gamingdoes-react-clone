@@ -1,32 +1,35 @@
 import React from 'react'
+import newsDetails from './news.js'
 
 const NewsList = () => {
     return (
         <div>
             <div>
-                <div className='flex justify-start items-start relative gap-6 w-full max-w-[960px] pb-6 mb-6'>
-                    <div className='basis-auto'>
-                        <a href="#">
-                            <img src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/thumb_news01.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <h2 className='text-xl font-semibold hover:text-main-blue'>Overwatch 2 เตรียมเปิดให้เล่นแบบ Free-to-play ในวันที่ 5 ตุลาคมนี้ เวลา 02:00 น.</h2>
-                        </a>
-                        <div className='flex items-center justify-start gap-4 mt-4'>
-                            <div className='text-[10px] text-main-blue'>
-                                BY <a href="#">KMUTT</a>
-                            </div>
-                            <div className='text-[10px] text-main-blue'>
-                                <a href="#">NEWS</a>
-                            </div>
-                            <div className='text-[10px] text-gray-400'>
-                                1 MINUTE AGO
+                {newsDetails.map((data, index) => (
+                    <div className='grid grid-cols-[230px_1fr] relative gap-6 w-full max-w-[960px] pb-6 mb-6' key={index}>
+                        <div className='basis-auto relative'>
+                            <a href="#">
+                                <img className='w-full h-full object-cover' src={data.img} alt="" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h2 className='text-xl font-semibold hover:text-main-blue'>{data.topicNews}</h2>
+                            </a>
+                            <div className='flex items-center justify-start gap-4 mt-4'>
+                                <div className='text-[10px] text-main-blue'>
+                                    BY <a href="#">{data.ref}</a>
+                                </div>
+                                <div className='text-[10px] text-main-blue'>
+                                    <a className='uppercase' href="#">{data.tag}</a>
+                                </div>
+                                <div className='text-[10px] text-gray-400 uppercase'>
+                                    {data.time}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     )
