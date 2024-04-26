@@ -17,7 +17,7 @@ const NewsSection = () => {
                                 </div>
                             </div>
                             <div className='w-[25%] basis-auto'>
-                                asdasd
+                                asdasdasdasdasd
                             </div>
                         </div>   
                     </div>
