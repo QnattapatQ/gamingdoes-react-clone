@@ -6,10 +6,10 @@ const NewsList = () => {
         <div>
             <div>
                 {newsDetails.map((data, index) => (
-                    <div className='grid grid-cols-[230px_1fr] relative gap-6 w-full max-w-[960px] pb-6 mb-6' key={index}>
-                        <div className='basis-auto relative'>
+                    <div className='flex relative gap-6 w-full max-w-[960px] pb-6 mb-6' key={index}>
+                        <div className='basis-auto relative max-w-[230px]'>
                             <a href="#">
-                                <img className='w-full h-full object-cover' src={data.img} alt="" />
+                                <img className='w-full' src={data.img} alt="" />
                             </a>
                         </div>
                         <div>
