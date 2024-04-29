@@ -19,6 +19,9 @@ export default {
         'main-blue': '#085DFF',
       },
     },
+    fontFamily: {
+      'prompt': ['Prompt'],
+    }
   },
   plugins: [],
 }

@@ -30,7 +30,7 @@ export const TrendingSwiper = () => {
                 {trendingTag.map((data) => (
                     <SwiperSlide key={data} className='w-auto overflow-hidden'>
                         <div className='border bg-[rgba(255_255_255_/_10%)] hover:bg-[rgba(255_255_255_/_20%)] border-[rgba(255_255_255_/_20%)] rounded-full overflow-hidden'>
-                            <a href="#" className='text-white font-semibold py-[5px] px-4'>{data}</a>
+                            <a href="#" className='text-white text-sm font-semibold py-[5px] px-4'>{data}</a>
                         </div> 
                     </SwiperSlide>
                 ))}
