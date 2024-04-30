@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection/HeroSection'
 import NewsSection from './components/News/NewsSection'
 import Trending from './components/Trending/Trending'
 import PopularSection from './components/Popular/PopularSection'
+import NewsHighlight from './components/NewsHighlight/NewsHighlight'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Trending/>
             <PopularSection/>
             <NewsSection/>
+            <NewsHighlight/>
         </div> 
     )
 }

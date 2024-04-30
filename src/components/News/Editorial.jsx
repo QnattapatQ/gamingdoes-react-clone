@@ -2,11 +2,11 @@ import React from 'react'
 
 const Editorial = () => {
     return (
-        <div className='font-prompt bg-[#f2faff] py-6'>
-            <div>
+        <div className='font-prompt bg-[#f2faff] max-xl:py-6 max-lg:-mx-14 max-lg:mr-[-68px]'>
+            <div className='pt-6'>
                 <h2 className='text-[22px] text-main-blue font-bold uppercase text-center'>Editorial</h2>
             </div>
-            <div className='pt-6'>
+            <div className='pb-6'>
                 <div className='pt-6'>
                     <a className='flex' href="#">
                         <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
