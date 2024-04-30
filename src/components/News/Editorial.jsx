@@ -8,7 +8,7 @@ const Editorial = () => {
             </div>
             <div className='pb-6'>
                 <div className='pt-6'>
-                    <a className='flex' href="#">
+                    <a className='flex hover:text-main-blue' href="#">
                         <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
                             1
                         </div>
@@ -18,7 +18,7 @@ const Editorial = () => {
                     </a>
                 </div>
                 <div className='pt-6'>
-                    <a className='flex' href="#">
+                    <a className='flex hover:text-main-blue' href="#">
                         <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
                             2
                         </div>
@@ -28,7 +28,7 @@ const Editorial = () => {
                     </a>
                 </div>
                 <div className='pt-6'>
-                    <a className='flex' href="#">
+                    <a className='flex hover:text-main-blue' href="#">
                         <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
                             3
                         </div>
@@ -38,7 +38,7 @@ const Editorial = () => {
                     </a>
                 </div>
                 <div className='pt-6'>
-                    <a className='flex' href="#">
+                    <a className='flex hover:text-main-blue' href="#">
                         <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
                             4
                         </div>
