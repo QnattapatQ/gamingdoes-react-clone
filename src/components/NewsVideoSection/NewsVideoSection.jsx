@@ -14,11 +14,11 @@ const NewsVideoSection = () => {
                             <div className='w-full basis-auto pr-8 max-xl:pb-6'>
                                 <div className='flex w-full justify-between items-center'>
                                     <h2 className='font-bold text-transparent uppercase text-4xl bg-main-blue-linear bg-clip-text w-fit'>Read</h2>
-                                    <div className='uppercase relative flex items-center justify-between'>
-                                        <div className='pr-11'>
-                                            <h2>Read More</h2>
+                                    <div className='uppercase relative flex items-center justify-between group/read group-hover/chevron:w-full'>
+                                        <div className=' bg-red-500 mr-10 cursor-pointer'>
+                                            <h2 className='font-bold'>Read More</h2>
                                         </div>
-                                        <div className='h-[32px] w-[32px] flex items-center justify-center bg-main-blue rounded-full absolute right-0'>
+                                        <div className='group/chevron h-[32px] w-[32px] flex items-center justify-end pr-[7px] cursor-pointer bg-main-blue rounded-full absolute right-0 duration-300 hover:w-full'>
                                             <FaChevronRight className='text-white'/>
                                         </div>
                                     </div>
