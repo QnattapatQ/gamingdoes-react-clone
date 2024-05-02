@@ -4,10 +4,7 @@ import ButtonBlue from '../ButtonBlue/ButtonBlue'
 import NewsList from '../News/NewsList'
 import ButtonTransition from '../ButtonTransition/ButtonTransition';
 import img1 from '../../assets/images/thumb_read01.jpg';
-import img2 from '../../assets/images/thumb_read02.jpg';
-import img3 from '../../assets/images/thumb_read03.jpg';
-import img4 from '../../assets/images/thumb_read04.jpg';
-import img5 from '../../assets/images/thumb_read04.jpg';
+import { FaPlay } from "react-icons/fa";
 import TagInfo from '../TagInfo/TagInfo';
 
 const NewsVideoSection = () => {
@@ -25,8 +22,11 @@ const NewsVideoSection = () => {
                                 <div className='my-12'>
                                     <div className='grid grid-cols-2 gap-[60px] font-prompt'>
                                         <div className='col-span-2'>
-                                            <div>
+                                            <div className='relative w-full'>
                                                 <img src={img1} alt="" />
+                                                <div className='absolute p-4 border-white rounded-full border right-5 bottom-5 flex items-center justify-center bg-white backdrop-filter backdrop-blur-sm bg-opacity-20'>
+                                                    <FaPlay className='text-white'/>
+                                                </div>
                                             </div>
                                             <div className='mt-6'>
                                                 <h2 className='font-semibold text-3xl'>30 เซ็ตติ้งและธีมยอดนิยมในวิดีโอเกมส์</h2>
