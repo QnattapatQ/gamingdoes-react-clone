@@ -26,7 +26,7 @@ const ReviewsSection = () => {
                                             <div>
                                                 <div className='px-6'>
                                                     <a href="#">
-                                                        <div>
+                                                        <div className='pr-6 text-nowrap'>
                                                             <p>Overwatch 2</p>
                                                         </div>
                                                     </a>

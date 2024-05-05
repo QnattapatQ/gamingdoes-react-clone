@@ -11,9 +11,6 @@ const ReviewContent = () => {
                     <div className='relative w-full'>
                         <a href='#'>
                             <img className='w-full object-cover' src={data.img} alt="" />
-                            <div className='absolute p-4 border-white rounded-full border right-4 bottom-4 flex items-center justify-center bg-white backdrop-filter backdrop-blur-sm bg-opacity-20'>
-                                <FaPlay className='text-white'/>
-                            </div>
                         </a>
                     </div>
                     <div className={`${data.content === '' ? 'mt-4' : 'mt-6'} group/topic line-clamp-3`}>
