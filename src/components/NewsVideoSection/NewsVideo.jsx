@@ -5,7 +5,6 @@ import TagInfo from '../TagInfo/TagInfo';
 
 const NewsVideo = () => {
     return (
-        <div>
             <div className='my-12'>
                 <div className='grid grid-cols-2 max-lg:grid-cols-1 gap-[60px] max-2xl:gap-10 max-xl:gap-y-12 max-xl:gap-x-6 font-prompt'>
                     {newsVideo.map((data, index) => (
@@ -29,7 +28,6 @@ const NewsVideo = () => {
                     ))}
                 </div>
             </div>
-        </div>
     )
 }
 

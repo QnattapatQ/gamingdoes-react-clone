@@ -1,11 +1,7 @@
 import React from 'react'
 import AdsSticky from '../AdsSticky/AdsSticky'
 import ButtonBlue from '../ButtonBlue/ButtonBlue'
-import NewsList from '../News/NewsList'
 import ButtonTransition from '../ButtonTransition/ButtonTransition';
-import img1 from '../../assets/images/thumb_read01.jpg';
-import { FaPlay } from "react-icons/fa";
-import TagInfo from '../TagInfo/TagInfo';
 import NewsVideo from './NewsVideo';
 
 const NewsVideoSection = () => {

@@ -8,6 +8,8 @@ import Trending from './components/Trending/Trending'
 import PopularSection from './components/Popular/PopularSection'
 import NewsHighlight from './components/NewsHighlight/NewsHighlight'
 import NewsVideoSection from './components/NewsVideoSection/NewsVideoSection'
+import WatchSection from './components/WatchSection/WatchSection'
+import ReviewsSection from './components/ReviewsSection/ReviewsSection'
 
 function App() {
     return (
@@ -20,6 +22,8 @@ function App() {
             <NewsSection/>
             <NewsHighlight/>
             <NewsVideoSection/>
+            <WatchSection/>
+            <ReviewsSection/>
         </div> 
     )
 }
