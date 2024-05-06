@@ -20,19 +20,19 @@ const ReviewsSection = () => {
                                     <h2 className='font-bold text-transparent uppercase text-4xl bg-main-blue-linear bg-clip-text'>Reviews</h2>
                                     <ButtonTransition textBtn={'Read More'}/>
                                 </div>
-                                <div className='flex my-12 basis-auto'>
-                                    <div className='bg-green-500 max-w-[25%] w-full basis-auto'>
+                                <div className='flex my-12 basis-auto max-2xl:flex-col-reverse'>
+                                    <div className='max-w-[25%] w-full basis-auto max-2xl:max-w-full max-2xl:py-6 max-2xl:mt-12 max-2xl:pr-6'>
                                         <div className='bg-[#F2FAFF] py-6'>
                                             <div>
-                                                <h2 className='uppercase px-6 font-semibold text-lg first:text-[#121D76] text-nowrap'>Top Chart</h2>
+                                                <h2 className='uppercase px-6 font-bold text-lg first:text-[#121D76] text-nowrap'>Top Chart</h2>
                                             </div>
-                                            <div>
-                                                {gameName.map((data) => (
-                                                    <div className='px-6 relative z-[1] py-4'>
-                                                        <a href="#">
+                                            <div className='px-6'>
+                                                {gameName.map((data, index) => (
+                                                    <div className={`${index + 1 !== gameName.length ? 'border-b py-4' : 'pt-4'} relative z-[1]`} key={index}>
+                                                        <a href="#" className='group/textblue'>
                                                             <div className='flex justify-between items-center gap-6 relative'>
                                                                 <div className='line-clamp-1 w-full'>
-                                                                    <p className='font-bold uppercase text-sm'>{data}</p>
+                                                                    <p className='font-bold uppercase text-sm group-hover/textblue:text-main-blue'>{data}</p>
                                                                 </div>
                                                                 <div className='text-white font-medium text-xs bg-main-blue px-2 py-1'>
                                                                     9.7
@@ -49,7 +49,7 @@ const ReviewsSection = () => {
                                             </div>
                                         </div>  
                                     </div>  
-                                    <div className='px-8'>
+                                    <div className='px-8 max-2xl:px-0 max-2xl:pr-6'>
                                         <ReviewContent/>
                                         <ButtonBlue textBtn={"More Reviews"}/>
                                     </div>
