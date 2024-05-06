@@ -6,6 +6,9 @@ import ReviewContent from './ReviewContent';
 
 
 const ReviewsSection = () => {
+
+    const gameName = ['Overwatch 2', 'Hoyoverse', 'God of War', 'Activision Blizzard', 'Titanfall 2', 'Trombone Champ']
+
     return (
         <div className='bg-white border-b-2'>
             <div className='max-w-[1332px] mx-auto px-4'>
@@ -17,26 +20,38 @@ const ReviewsSection = () => {
                                     <h2 className='font-bold text-transparent uppercase text-4xl bg-main-blue-linear bg-clip-text'>Reviews</h2>
                                     <ButtonTransition textBtn={'Read More'}/>
                                 </div>
-                                <div className='flex my-12'>
-                                    <div className='bg-green-500'>
+                                <div className='flex my-12 basis-auto'>
+                                    <div className='bg-green-500 max-w-[25%] w-full basis-auto'>
                                         <div className='bg-[#F2FAFF] py-6'>
                                             <div>
                                                 <h2 className='uppercase px-6 font-semibold text-lg first:text-[#121D76] text-nowrap'>Top Chart</h2>
                                             </div>
                                             <div>
-                                                <div className='px-6'>
-                                                    <a href="#">
-                                                        <div className='pr-6 text-nowrap'>
-                                                            <p>Overwatch 2</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                                {gameName.map((data) => (
+                                                    <div className='px-6 relative z-[1] py-4'>
+                                                        <a href="#">
+                                                            <div className='flex justify-between items-center gap-6 relative'>
+                                                                <div className='line-clamp-1 w-full'>
+                                                                    <p className='font-bold uppercase text-sm'>{data}</p>
+                                                                </div>
+                                                                <div className='text-white font-medium text-xs bg-main-blue px-2 py-1'>
+                                                                    9.7
+                                                                    <div className='relative'>
+                                                                        <div className='bg-main-blue w-[8px] h-[8px] absolute skew-x-[40deg] -top-[20px] -left-[10px] z-[-2]'>
+                                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>  
                                     </div>  
                                     <div className='px-8'>
                                         <ReviewContent/>
-                                        <ButtonBlue textBtn={"READ MORE"}/>
+                                        <ButtonBlue textBtn={"More Reviews"}/>
                                     </div>
                                 </div>
                             </div>
