@@ -22,7 +22,7 @@ const ReviewsSection = () => {
                                 </div>
                                 <div className='flex my-12 basis-auto max-xl:flex-col-reverse max-lg:mb-0'>
                                     <div className='max-w-[25%] w-full basis-auto max-2xl:max-w-full max-xl:py-6 max-xl:mt-12 max-2xl:pr-6 max-lg:pr-0'>
-                                        <div className='bg-[#F2FAFF] py-6'>
+                                        <div className='bg-[#F2FAFF] py-6 relative max-lg:-mx-[auto]'>
                                             <div>
                                                 <h2 className='uppercase px-6 font-bold text-lg first:text-[#121D76] text-nowrap'>Top Chart</h2>
                                             </div>

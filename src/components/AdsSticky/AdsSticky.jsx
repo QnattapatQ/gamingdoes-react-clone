@@ -10,7 +10,7 @@ const AdsSticky = () => {
                     <img className='' src={adsImg01} alt="" />
                 </a>
             </div>
-            <div className='px-5 py-6 max-lg:block hidden'>
+            <div className='py-6 max-lg:block hidden'>
                 <a href="#">
                     <img className='' src={adsImg02} alt="" />
                 </a>

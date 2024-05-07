@@ -2,7 +2,7 @@ import React from 'react'
 
 const Editorial = () => {
     return (
-        <div className='font-prompt bg-[#f2faff] max-xl:py-6 max-lg:-mx-14 max-lg:mr-[-68px]'>
+        <div className='font-prompt bg-[#f2faff] max-xl:py-6 max-lg:-mx-14 max-lg:mr-[-68px] max-md:mr-[-56px]'>
             <div className='pt-6'>
                 <h2 className='text-[22px] text-main-blue font-bold uppercase text-center'>Editorial</h2>
             </div>
