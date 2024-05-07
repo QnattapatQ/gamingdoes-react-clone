@@ -17,7 +17,7 @@ const ReviewContent = () => {
                     <a href="#" className='group/textblue'>
                         <div>
                             <div className='flex justify-between items-start w-full'>
-                                <h2 className='text-[28px] font-semibold w-[80%] group-hover/textblue:text-main-blue'>พรีวิว Honkai: Star Rail (CBT2) การผจญภัยครั้งแรกของผู้บุกเบิกโดยมีมนุษยชาติเป็นเดิมพัน</h2>
+                                <h2 className='text-[28px] max-2xl:text-[22px] font-semibold w-[80%] group-hover/textblue:text-main-blue'>พรีวิว Honkai: Star Rail (CBT2) การผจญภัยครั้งแรกของผู้บุกเบิกโดยมีมนุษยชาติเป็นเดิมพัน</h2>
                                 <div className='text-white font-medium text-xs bg-main-blue px-2 py-1'>
                                     9.7
                                     <div className='relative'>
@@ -40,7 +40,7 @@ const ReviewContent = () => {
                 </div>
                 <div className=''>
                     {newsDetails.map((data, index) => (
-                        <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] max-2xl:grid-cols-[200px_auto] max-lg:grid-cols-[180px_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6`} key={index}>
+                        <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] max-2xl:grid-cols-[180px_auto] max-lg:grid-cols-[200px_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6`} key={index}>
                             <div className='basis-auto relative'>
                                 <a href="#">
                                     <img className='w-full object-cover' src={data.img} alt="" />
