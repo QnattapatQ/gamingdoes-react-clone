@@ -13,7 +13,7 @@ const ReviewsSection = () => {
         <div className='bg-white border-b-2'>
             <div className='max-w-[1332px] mx-auto px-4'>
                 <div className='grid grid-cols-[1fr_332px] max-2xl:grid-cols-[1fr_260px] max-xl:grid-cols-[1fr_186px] max-lg:grid-cols-[1fr] pl-[70px] max-2xl:pl-10 max-xl:px-5 max-md:px-2'>
-                    <div className='border-r-2 max-lg:border-r-0 py-16 max-lg:pb-0'>
+                    <div className='border-r-2 max-lg:border-r-0 pt-16 max-lg:pb-0'>
                         <div className='flex items-start justify-stretch max-xl:flex-col'>
                             <div className='w-full basis-auto max-lg:pr-0 max-xl:pb-6 max-lg:pb-0'>
                                 <div className='flex pr-8 max-lg:pr-0 w-full justify-between items-center'>
@@ -21,7 +21,7 @@ const ReviewsSection = () => {
                                     <ButtonTransition textBtn={'Read More'}/>
                                 </div>
                                 <div className='flex my-12 basis-auto max-xl:flex-col-reverse max-lg:mb-0'>
-                                    <div className='max-w-[25%] w-full basis-auto max-2xl:max-w-full max-xl:py-6 max-xl:mt-12 max-2xl:pr-6 max-lg:pr-0'>
+                                    <div className='max-w-[25%] max-xl:max-w-[100%] w-full basis-auto max-2xl:max-w-full max-xl:py-6 max-xl:mt-12 max-2xl:pr-6 max-lg:pr-0'>
                                         <div className='bg-[#F2FAFF] py-6 relative max-lg:-mx-[auto]'>
                                             <div>
                                                 <h2 className='uppercase px-6 font-bold text-lg first:text-[#121D76] text-nowrap'>Top Chart</h2>
@@ -31,7 +31,7 @@ const ReviewsSection = () => {
                                                     <div className={`${index + 1 !== gameName.length ? 'border-b py-4' : 'pt-4'} relative z-[1]`} key={index}>
                                                         <a href="#" className='group/textblue'>
                                                             <div className='flex justify-between items-center gap-6 relative'>
-                                                                <div className='line-clamp-1 w-full'>
+                                                                <div className='line-clamp-1'>
                                                                     <p className='font-bold uppercase text-sm group-hover/textblue:text-main-blue'>{data}</p>
                                                                 </div>
                                                                 <div className='text-white font-medium text-xs bg-main-blue px-2 py-1'>

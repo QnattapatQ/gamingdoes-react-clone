@@ -10,6 +10,7 @@ import NewsHighlight from './components/NewsHighlight/NewsHighlight'
 import NewsVideoSection from './components/NewsVideoSection/NewsVideoSection'
 import WatchSection from './components/WatchSection/WatchSection'
 import ReviewsSection from './components/ReviewsSection/ReviewsSection'
+import Footer from './components/Footer/Footer'
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
             <NewsVideoSection/>
             <WatchSection/>
             <ReviewsSection/>
+            <Footer/>
         </div> 
     )
 }

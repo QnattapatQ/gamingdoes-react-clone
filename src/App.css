@@ -3,3 +3,7 @@
 .bg-main-blue-linear {
     background: linear-gradient(268.05deg, #080E40 11.64%, #085DFF 111.07%);
 }
+
+.bg-sup-blue-linear {
+    background: linear-gradient(170.84deg, #085DFF -1.77%, #000000 115.78%);
+}

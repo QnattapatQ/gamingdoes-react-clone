@@ -5,10 +5,10 @@ const NewsList = () => {
     return (
             <div className=''>
                 {newsDetails.map((data, index) => (
-                    <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto]  max-lg:grid-cols-[180px_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6`} key={index}>
+                    <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6`} key={index}>
                         <div className='basis-auto relative'>
                             <a href="#">
-                                <img className='w-full object-cover' src={data.img} alt="" />
+                                <img className='w-full h-full object-cover' src={data.img} alt="" />
                             </a>
                         </div>
                         <div className='flex flex-col h-full justify-between font-prompt'>
