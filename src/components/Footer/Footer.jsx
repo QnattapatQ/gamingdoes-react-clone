@@ -49,7 +49,7 @@ const Footer = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className='pt-8 flex items-center justify-between'>
+                        <div className='pt-8 flex items-center justify-between max-md:flex-col max-md:items-start'>
                             <div className='flex gap-10 max-lg:flex-col max-lg:gap-2'>
                                 <a href="#" className='text-gray-300'>
                                     Terms & Privacy
@@ -59,7 +59,7 @@ const Footer = () => {
                                 </p>
                             </div>
                             <div>
-                                <div className='social-wrapper flex items-center justify-center gap-3'>
+                                <div className='social-wrapper flex items-center justify-center gap-3 max-md:pt-4'>
                                     <a className='text-white inline-block w-full' href="#"><FaFacebook className='social-option text-2xl'/></a>
                                     <a className='text-white inline-block w-full' href="#"><FaYoutube className='social-option text-2xl'/></a>
                                     <a className='text-white inline-block w-full' href="#"><FaTiktok className='social-option text-2xl'/></a>
@@ -72,7 +72,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute top-[110px] w-full bg-red-500'>
+            <div className='absolute top-[110px] w-full'>
                 <img className='w-[50px] animate-mario-move' src={mario} alt="" />
             </div>
         </div>

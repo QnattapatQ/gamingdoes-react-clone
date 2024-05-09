@@ -11,7 +11,7 @@ const PopularSection = () => {
     return (
         <div className='bg-white pt-16 pb-6 max-xl:pb-16 border-b-2'>
             <div className='max-w-[1332px] mx-auto px-4'>
-                <div className='px-[70px] max-2xl:px-10'>
+                <div className='px-[70px] max-2xl:px-10 max-xl:px-5 max-lg:px-2'>
                     <h2 className='font-bold text-transparent uppercase text-xl bg-main-blue-linear bg-clip-text w-fit'>THIS WEEK'S POPULAR</h2>
                 </div>
                 <div className='mt-8'>
