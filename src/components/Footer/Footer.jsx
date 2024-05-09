@@ -3,15 +3,16 @@ import { FaChevronUp } from "react-icons/fa6";
 import logo from '../../assets/images/logo_main.svg'
 import { SocialMenu } from '../Header/SocialMenu';
 import { FaFacebook, FaYoutube, FaTiktok, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa6";
+import mario from '../../assets/images/mario_footer.gif';
 
 const Footer = () => {
     return (
-        <div>
+        <div className='relative overflow-hidden'>
             <div className='w-full flex justify-center items-center py-[60px] max-xl:py-12'>
-                <a href="">
+                <a href="#topads" className='group/chevron relative'>
                     <div className='w-full flex flex-col items-center'>
-                        <FaChevronUp />
-                        <p>Back to top</p>
+                        <FaChevronUp className='text-main-blue text-lg duration-200 absolute -top-1 group-hover/chevron:-top-[6px]'/>
+                        <p className='uppercase text-main-blue font-semibold pt-4'>Back to top</p>
                     </div>
                 </a>
             </div>
@@ -70,6 +71,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='absolute top-[110px] w-full'>
+                <img className='w-[50px] animate-mario-move' src={mario} alt="" />
             </div>
         </div>
     )
