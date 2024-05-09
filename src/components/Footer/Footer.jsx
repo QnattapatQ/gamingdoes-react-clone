@@ -72,7 +72,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute top-[110px] w-full'>
+            <div className='absolute top-[110px] w-full bg-red-500'>
                 <img className='w-[50px] animate-mario-move' src={mario} alt="" />
             </div>
         </div>
