@@ -11,6 +11,9 @@ const WatchSection = () => {
                             <h2 className='font-bold text-transparent uppercase text-4xl text-white'>Watch</h2>
                             <ButtonTransition textBtn={'Watch More'} textColor={true}/>
                         </div>
+                        <div>
+                            
+                        </div>
                     </div>  
                 </div>               
             </div>
