@@ -25,6 +25,26 @@ const watchData = [
         img: img5,
         topic: 'Review : Resident Evil 3 (2020)',
     },
+    {
+        img: img1,
+        topic: 'Review : Resident Evil 3 (2020)',
+    },
+    {
+        img: img2,
+        topic: 'Review : Resident Evil 3 (2020)',
+    },
+    {
+        img: img3,
+        topic: 'Review : Resident Evil 3 (2020)',
+    },
+    {
+        img: img4,
+        topic: 'Review : Resident Evil 3 (2020)',
+    },
+    {
+        img: img5,
+        topic: 'Review : Resident Evil 3 (2020)',
+    },
 ];
 
 export default watchData
