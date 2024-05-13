@@ -7,7 +7,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import watchData from './watchData.js';
 import { FaPlay } from "react-icons/fa";
-import { useRef, useEffect, useState } from 'react';
+import './style.css';
+import { GrPrevious, GrNext } from "react-icons/gr";
+import { useEffect, useState } from 'react';
 
 const WatchSlide = ({ setCurrentIndexOfImage }) => {
 
@@ -21,6 +23,12 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
         setCurrentIndexOfImage(curentIndexOfSlide)
     }, [curentIndexOfSlide]);
 
+    const nextSlide = () => {
+        if(curentIndexOfSlide < watchData.length - 1){
+            setCurrentIndexOfSlide((prevCount) => prevCount + 1)
+        }
+    }
+
     return (
         <div>
             <div className='pt-4 pb-6'>
@@ -29,7 +37,7 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
                     centeredSlides={true}
                     spaceBetween={-430}
                     slidesPerView={3}
-                    modules={[Pagination, Navigation]}
+                    modules={[Navigation]}
                     onSlideChange={handleSlideIndexChange}
                     className='mySwiper h-full w-full relative'
                 >
@@ -58,6 +66,14 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
                             }}
                         </SwiperSlide>  
                     ))}
+                    <div className='max-w-[1332px] mx-auto px-4'>
+                        <div className='px-[70px]'>
+                            <div className='flex items-center justify-between'>
+                                <div className='text-white'><GrPrevious /></div>
+                                <div className='text-white' onClick={() => nextSlide()}><GrNext /></div>
+                            </div>
+                        </div>
+                    </div>  
                 </Swiper>
             </div>
         </div>
