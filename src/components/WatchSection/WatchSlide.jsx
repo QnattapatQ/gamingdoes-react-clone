@@ -9,13 +9,17 @@ import watchData from './watchData.js';
 import { FaPlay } from "react-icons/fa";
 import { useRef, useEffect, useState } from 'react';
 
-const WatchSlide = () => {
+const WatchSlide = ({ setCurrentIndexOfImage }) => {
 
     const [curentIndexOfSlide, setCurrentIndexOfSlide] = useState(0); // State รับค่า Index จาก Slide ปัจจุบัน
 
     const handleSlideIndexChange = (swiper) => {  // function สำหรับรับต่า index ของ slide ปัจจุบัน
         setCurrentIndexOfSlide(swiper.realIndex)
     }
+
+    useEffect(() => {
+        setCurrentIndexOfImage(curentIndexOfSlide)
+    }, [curentIndexOfSlide]);
 
     return (
         <div>
