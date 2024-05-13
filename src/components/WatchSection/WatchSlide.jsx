@@ -16,6 +16,7 @@ const WatchSlide = () => {
 
     const [curentIndexOfSlide, setCurrentIndexOfSlide] = useState(0); // State รับค่า Index จาก Slide ปัจจุบัน
     const [slideActive, setSlideActive] = useState(false); // State รับค่า Index จาก Slide ปัจจุบัน
+    const [countSlide, setCountSlide] = useState(0); // State รับค่า Index จาก Slide ปัจจุบัน
     const [swiperIndex, setSwiperIndex] = useState(null);
 
     const handleSlideIndexChange = (swiper) => {  // function สำหรับรับต่า index ของ slide ปัจจุบัน
@@ -23,44 +24,15 @@ const WatchSlide = () => {
     }
 
 
-    useEffect(() => {
-        console.log(curentIndexOfSlide)
-    }, [curentIndexOfSlide]);
-
-    useEffect(() => {
-        if (swiperIndex !== null) {
-            const handleSlideChange = () => {
-            const activeIndex = swiperIndex.realIndex;
-            const slidesCount = swiperIndex.slides.length;
-            const nonActiveIndexes = Array.from(Array(slidesCount).keys()).filter(index => index !== activeIndex);
-            // console.log(nonActiveIndexes);
-          };
-    
-          swiperIndex.on('slideChange', handleSlideChange);
-    
-          return () => {
-            swiperIndex.off('slideChange', handleSlideChange);
-          };
-        }
-    }, [swiperIndex]);
-
-
     return (
-        <div>
+        <div className='w-full h-full'>
             <Swiper
-            onSwiper={setSwiperIndex}
                 ref={swiperRef}
-                effect={'coverflow'}
                 loop={true}
                 centeredSlides={true}
+                spaceBetween={-280}
                 grabCursor={true}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 50,
-                    depth: 500,
-                    modifier: 1.5,
-                }}
-                slidesPerView={2}
+                slidesPerView={5}
                 pagination={{ el: '.swiper-pagination', clickable: true }}
                 navigation={{
                     nextEl: '.swiper-button-next',
@@ -75,8 +47,11 @@ const WatchSlide = () => {
                     <SwiperSlide key={index}>
                         {({ isActive }) => {
                             return (
-                                <div>
-                                    <img className='w-full' src={data.img} alt="" />
+                                <div className={`${isActive ? 'scale-[1] z-[2]' : 'scale-[0.5] z-[0]'} w-full h-full duration-500 top-0 bottom-0 margin-x`}>
+                                    <img className='w-full h-full z-[1]' src={data.img} alt="" />
+                                    <div className={`${isActive ? 'block' : 'hidden'}`}>
+                                        <h2>{data.topic}</h2>    
+                                    </div>
                                 </div>
                             )
                         }}
