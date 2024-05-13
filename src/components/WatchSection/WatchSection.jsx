@@ -4,7 +4,7 @@ import WatchSlide from './WatchSlide';
 
 const WatchSection = () => {
     return (
-        <div className='bg-red-500'>
+        <div className='bg-red-500 relative'>
             <div className='max-w-[1332px] mx-auto px-4'>
                 <div className='px-[70px]'>
                     <div className='pt-16 pb-8'>

@@ -12,6 +12,6 @@ html {
     background: linear-gradient(170.84deg, #085DFF -1.77%, #000000 115.78%);
 }
 
-/* .margin-x {
-    margin: 0 -20%;
-} */
+.margin-x {
+    margin: 0 calc(-50% - 24px);
+}
