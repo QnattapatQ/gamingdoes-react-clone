@@ -30,9 +30,9 @@ const WatchSlide = () => {
                 ref={swiperRef}
                 loop={true}
                 centeredSlides={true}
-                spaceBetween={-280}
                 grabCursor={true}
-                slidesPerView={5}
+                spaceBetween={-450}
+                slidesPerView={3}
                 pagination={{ el: '.swiper-pagination', clickable: true }}
                 navigation={{
                     nextEl: '.swiper-button-next',
@@ -47,7 +47,7 @@ const WatchSlide = () => {
                     <SwiperSlide key={index}>
                         {({ isActive }) => {
                             return (
-                                <div className={`${isActive ? 'scale-[1] z-[2]' : 'scale-[0.5] z-[0]'} w-full h-full duration-500 top-0 bottom-0 margin-x`}>
+                                <div className={`${isActive ? 'scale-[1] z-[200]' : 'scale-[0.5]'} w-full h-full duration-500 top-0 bottom-0 z-[-100]`}>
                                     <img className='w-full h-full z-[1]' src={data.img} alt="" />
                                     <div className={`${isActive ? 'block' : 'hidden'}`}>
                                         <h2>{data.topic}</h2>    
