@@ -68,7 +68,7 @@ const WatchSection = () => {
                 </div>
             </div>
             <div className='max-w-[1332px] mx-auto px-4'>
-                <div className='px-[70px]'>
+                <div className='px-[70px] max-2xl:px-10 max-xl:px-6 max-md:px-2'>
                     <div>
                         <div className='flex max-lg:pr-0 w-full justify-between items-center'>
                             <h2 className='font-bold text-transparent uppercase text-4xl text-white'>Watch</h2>
