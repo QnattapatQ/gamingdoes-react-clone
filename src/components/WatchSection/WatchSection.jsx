@@ -49,7 +49,7 @@ const WatchSection = () => {
     }, [currentIndexOfImage]);
 
     return (
-        <div className='relative overflow-hidden'>
+        <div className='relative overflow-hidden pt-16 pb-8'>
             <div className='absolute inset-0 w-full -z-10 bg-black flex'>
                 <div className={`${firstBG ? 'opacity-100 visible' : 'opacity-0 invisible'} absolute h-full w-full duration-500 ease bg-blur scale-[1.05] bg-blur blur-[35px]`}>
                     <img className='w-full h-full object-cover' src={watchData[0].img} alt="" />
@@ -69,7 +69,7 @@ const WatchSection = () => {
             </div>
             <div className='max-w-[1332px] mx-auto px-4'>
                 <div className='px-[70px]'>
-                    <div className='pt-16 pb-8'>
+                    <div>
                         <div className='flex max-lg:pr-0 w-full justify-between items-center'>
                             <h2 className='font-bold text-transparent uppercase text-4xl text-white'>Watch</h2>
                             <ButtonTransition textBtn={'Watch More'} textColor={true}/>

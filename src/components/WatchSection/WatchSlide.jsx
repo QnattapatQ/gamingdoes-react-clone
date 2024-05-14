@@ -30,22 +30,52 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
     }
 
     return (
-        <div>
-            <div className='pt-4 pb-6'>
+        <div className='pt-8'>
+            <div>
                 <Swiper
                     loop={true}
                     centeredSlides={true}
-                    spaceBetween={-430}
+                    spaceBetween={40}
                     slidesPerView={3}
+                    navigation={{
+                        nextEl: '.my-custom-next',
+                        prevEl: '.my-custom-prev',
+                    }}
                     modules={[Navigation]}
+                    breakpoints={{
+                        640: {
+                          slidesPerView: 3,
+                          spaceBetween: -430,
+                        },
+                        768: {
+                          slidesPerView: 3,
+                          spaceBetween: -380,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: -300,
+                        },
+                        1200: {
+                          slidesPerView: 3,
+                          spaceBetween: -280,
+                        },
+                        1280: {
+                            slidesPerView: 3,
+                            spaceBetween: -240,
+                        },
+                        1600: {
+                            slidesPerView: 3,
+                            spaceBetween: -200,
+                        },
+                    }}
                     onSlideChange={handleSlideIndexChange}
-                    className='mySwiper h-full w-full relative'
+                    className='mySwiper h-full w-full relative pt-4 pb-6'
                 >
                     {watchData.map((data, index) => (
-                        <SwiperSlide key={index} className={`${curentIndexOfSlide !== index ? 'z-[-10]' : ''}`}>
+                        <SwiperSlide key={index} className={`${curentIndexOfSlide !== index ? 'z-[-10]' : ''} pt-2 pb-10`}>
                             {({ isActive }) => {
                                 return (
-                                    <div className={`${isActive ? 'scale-[1]' : 'scale-[0.5]'} w-full h-full duration-500 top-0 bottom-0 z-[-100] relative`}>
+                                    <div className={`${isActive ? 'scale-[1]' : 'scale-[0.5]'} w-full h-full duration-500 ease top-0 bottom-0 z-[-100] relative`}>
                                         <div className='relative border border-[rgba(255_255_255_/_15%)]'>
                                             <img className='w-full h-full z-[1]' src={data.img} alt="" />
                                             <a href='#' className={`${isActive ? 'block' : 'hidden'} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
@@ -69,8 +99,8 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
                     <div className='max-w-[1332px] mx-auto px-4'>
                         <div className='px-[70px]'>
                             <div className='flex items-center justify-between'>
-                                <div className='text-white'><GrPrevious /></div>
-                                <div className='text-white' onClick={() => nextSlide()}><GrNext /></div>
+                                <div className='my-custom-prev bg-[rgba(255_255_255_/_15%)] w-[56px] h-[56px] border border-white rounded-full flex items-center justify-center cursor-pointer'><GrPrevious className='text-white text-4xl'/></div>
+                                <div className='my-custom-next bg-[rgba(255_255_255_/_15%)] w-[56px] h-[56px] border border-white rounded-full flex items-center justify-center cursor-pointer'><GrNext className='text-white text-4xl'/></div>
                             </div>
                         </div>
                     </div>  
