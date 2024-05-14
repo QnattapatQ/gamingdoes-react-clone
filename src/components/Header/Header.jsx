@@ -66,7 +66,7 @@ const Header = () => {
 
     return (
         <div className='sticky top-0 left-0 w-full z-[99] py-3'>
-            <div className='relative z-20 h-full'>
+            <div className='nav-header relative z-20 h-full'>
                 <div className={`${stickyNav ? 'bg-linear-blue fixed top-0 left-0 right-0 py-3' : 'py-4 absolute'} px-4 w-full`}>
                     <div className='max-w-[1332px] w-full mx-auto'>
                         <div className='text-2xl w-full flex items-center justify-between gap-4'>
