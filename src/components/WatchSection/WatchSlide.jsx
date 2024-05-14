@@ -35,39 +35,12 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
                 <Swiper
                     loop={true}
                     centeredSlides={true}
-                    spaceBetween={40}
-                    slidesPerView={3}
+                    slidesPerView={4}
                     navigation={{
                         nextEl: '.my-custom-next',
                         prevEl: '.my-custom-prev',
                     }}
                     modules={[Navigation]}
-                    breakpoints={{
-                        640: {
-                          slidesPerView: 3,
-                          spaceBetween: -430,
-                        },
-                        768: {
-                          slidesPerView: 3,
-                          spaceBetween: -380,
-                        },
-                        992: {
-                            slidesPerView: 3,
-                            spaceBetween: -300,
-                        },
-                        1200: {
-                          slidesPerView: 3,
-                          spaceBetween: -280,
-                        },
-                        1280: {
-                            slidesPerView: 3,
-                            spaceBetween: -240,
-                        },
-                        1600: {
-                            slidesPerView: 3,
-                            spaceBetween: -200,
-                        },
-                    }}
                     onSlideChange={handleSlideIndexChange}
                     className='mySwiper h-full w-full relative pt-4 pb-6'
                 >
@@ -75,21 +48,23 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
                         <SwiperSlide key={index} className={`${curentIndexOfSlide !== index ? 'z-[-10]' : ''} pt-2 pb-10`}>
                             {({ isActive }) => {
                                 return (
-                                    <div className={`${isActive ? 'scale-[1]' : 'scale-[0.5]'} w-full h-full duration-500 ease top-0 bottom-0 z-[-100] relative`}>
-                                        <div className='relative border border-[rgba(255_255_255_/_15%)]'>
-                                            <img className='w-full h-full z-[1]' src={data.img} alt="" />
-                                            <a href='#' className={`${isActive ? 'block' : 'hidden'} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
-                                                <div className='p-4 w-[6vw] h-[6vw] border-white rounded-full border flex items-center justify-center bg-white backdrop-filter backdrop-blur-md bg-opacity-20'>
-                                                    <FaPlay className='text-white text-[2.5vw] ml-[10%]'/>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div className={`${isActive ? 'block' : 'hidden'} pt-4`}>
-                                            <h2 className='text-3xl text-white font-bold'>{data.topic}</h2>    
-                                        </div>
-                                        <div className={`${isActive ? 'block' : 'hidden'} flex gap-4 mt-2 text-white text-[10px]`}>
-                                            <p>BY KKMTC</p>
-                                            <p>NEWS</p>
+                                    <div className={`${isActive ? 'scale-[1] mx-0' : 'scale-[0.5]'} w-full h-full duration-500 ease top-0 bottom-0 z-[-100] relative`}>
+                                        <div className='margin-x'>
+                                            <div className='relative border border-[rgba(255_255_255_/_15%)]'>
+                                                <img className='w-full h-full z-[1]' src={data.img} alt="" />
+                                                <a href='#' className={`${isActive ? 'block' : 'hidden'} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
+                                                    <div className='p-4 w-[6vw] h-[6vw] border-white rounded-full border flex items-center justify-center bg-white backdrop-filter backdrop-blur-md bg-opacity-20'>
+                                                        <FaPlay className='text-white text-[2.5vw] ml-[10%]'/>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div className={`${isActive ? 'block' : 'hidden'} pt-4`}>
+                                                <h2 className='text-3xl text-white font-bold'>{data.topic}</h2>    
+                                            </div>
+                                            <div className={`${isActive ? 'block' : 'hidden'} flex gap-4 mt-2 text-white text-[10px]`}>
+                                                <p>BY KKMTC</p>
+                                                <p>NEWS</p>
+                                            </div>
                                         </div>
                                     </div>
                                 )
