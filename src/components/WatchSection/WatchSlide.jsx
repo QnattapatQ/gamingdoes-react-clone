@@ -69,23 +69,25 @@ const WatchSlide = ({ setCurrentIndexOfImage }) => {
                             {({ isActive }) => {
                                 return (
                                     <div className={`${isActive ? 'scale-[1] mx-0' : 'scale-[0.5]'} w-full h-full duration-500 ease top-0 bottom-0 z-[-100] relative`}>
-                                        <div className='margin-x'>
-                                            <div className='relative border border-[rgba(255_255_255_/_15%)]'>
-                                                <img className='w-full h-full z-[1]' src={data.img} alt="" />
-                                                <a href='#' className={`${isActive ? 'block' : 'hidden'} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
-                                                    <div className='p-6 border-white rounded-full border flex items-center justify-center bg-white backdrop-filter backdrop-blur-md bg-opacity-20'>
-                                                        <FaPlay className='text-white text-[36px] ml-[10%] max-xl:text-[36px] max-2xl:text-3xl'/>
-                                                    </div>
-                                                </a>
+                                        <a href="#">
+                                            <div className='margin-x'>
+                                                <div className='relative border border-[rgba(255_255_255_/_15%)]'>
+                                                    <img className='w-full h-full z-[1]' src={data.img} alt="" />
+                                                    <a href='#' className={`${isActive ? 'block' : 'hidden'} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
+                                                        <div className='p-6 border-white rounded-full border flex items-center justify-center bg-white backdrop-filter backdrop-blur-md bg-opacity-20'>
+                                                            <FaPlay className='text-white text-[36px] ml-[10%] max-xl:text-[36px] max-2xl:text-3xl'/>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div className={`${isActive ? 'block' : 'hidden'} pt-4`}>
+                                                    <h2 className='text-3xl text-white font-bold max-2xl:text-2xl max-xl:text-center max-md:text-[22px]'>{data.topic}</h2>    
+                                                </div>
+                                                <div className={`${isActive ? 'block' : 'hidden'} flex w-full gap-4 mt-2 text-white text-[10px] max-xl:justify-center`}>
+                                                    <p>BY KKMTC</p>
+                                                    <p>NEWS</p>
+                                                </div>
                                             </div>
-                                            <div className={`${isActive ? 'block' : 'hidden'} pt-4`}>
-                                                <h2 className='text-3xl text-white font-bold max-2xl:text-2xl max-xl:text-center max-md:text-[22px]'>{data.topic}</h2>    
-                                            </div>
-                                            <div className={`${isActive ? 'block' : 'hidden'} flex w-full gap-4 mt-2 text-white text-[10px] max-xl:justify-center`}>
-                                                <p>BY KKMTC</p>
-                                                <p>NEWS</p>
-                                            </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 )
                             }}
