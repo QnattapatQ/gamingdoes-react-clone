@@ -1,6 +1,6 @@
 import ResponsiveSize from '../public/ResponsiveSize'
 import BackdropBG from './components/BackdropBG/BackdropBG'
-import Header from './components/Header/Header'
+import Header from './components/Header/Header.jsx'
 import TopBannerAds from './components/Header/TopBanner'
 import HeroSection from './components/HeroSection/HeroSection'
 import NewsSection from './components/News/NewsSection'

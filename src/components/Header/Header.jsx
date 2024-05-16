@@ -32,27 +32,20 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener('scroll', resetScroll);
 
-        if(scrollDetail.scrollDetail >= 350) {
+        if(desktopSize.winWidth >= 1100 && scrollDetail.scrollDetail >= 350) {
+            setStickyNav(true);
+        } else if ((desktopSize.winWidth <= 810 && desktopSize.winWidth >= 769) && scrollDetail.scrollDetail >= 260) {
+            setStickyNav(true);
+        } else if (desktopSize.winWidth <= 768 && scrollDetail.scrollDetail >= 680) {
             setStickyNav(true);
         } else {
             setStickyNav(false);
         }
 
-        // if(desktopSize.winWidth < 1200) {
-        //     if(scrollDetail.scrollDetail >= 320) {
-        //         setStickyNav(true);
-        //     } else {
-        //         setStickyNav(false);
-        //     }
-        // } else if (desktopSize.winWidth <= 1040 && desktopSize.winWidth >= 1040) {
-        //     if(scrollDetail.scrollDetail >= 299) {
-        //         setStickyNav(true);
-        //     } else {
-        //         setStickyNav(false);
-        //     }
-        // }
+        // console.log(scrollDetail)
+        // console.log(desktopSize.winWidth)
 
-    },[scrollDetail])
+    },[scrollDetail, desktopSize.winWidth])
 
     useEffect(() => {
         window.addEventListener('resize', detechSize);
@@ -65,7 +58,7 @@ const Header = () => {
 
 
     return (
-        <div className='sticky top-0 left-0 w-full z-[99] py-3'>
+        <div className=''>
             <div className='nav-header relative z-20 h-full'>
                 <div className={`${stickyNav ? 'bg-linear-blue fixed top-0 left-0 right-0 py-3' : 'py-4 absolute'} px-4 w-full`}>
                     <div className='max-w-[1332px] w-full mx-auto'>
