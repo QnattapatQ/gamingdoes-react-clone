@@ -27,7 +27,7 @@ const SlideShow = ({ getIndex }) => {
     },[curentIndexOfSlide]);
 
     return (
-        <div className='h-full relative'>
+        <div className='h-full relative bg-black max-lg:bg-transparent'>
             <Swiper
                 modules={[Autoplay, Pagination]}
                 slidesPerView={1}

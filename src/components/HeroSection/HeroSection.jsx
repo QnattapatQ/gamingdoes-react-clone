@@ -11,7 +11,7 @@ const HeroSection = () => {
     return (
         <div>
             <div className='relative'>
-                <div className='block text-white h-full px-4 pt-[120px] max-xl:pt-[100px] max-lg:px-0'>
+                <div className='block text-white h-full px-4 pt-[120px] max-xl:pt-[100px] max-lg:pt-[80px]  max-lg:px-0'>
                     <div className='max-w-[1332px] w-full mx-auto'>
                         <div className='grid grid-cols-[1fr_300px] gap-8 h-full max-2xl:grid-cols-[1fr_260px] max-2xl:gap-5 max-xl:grid-cols-[1fr_186px] max-xl:gap-3 max-lg:grid-cols-[1fr] max-lg:gap-0'>
                             <div className='h-full overflow-hidden'>

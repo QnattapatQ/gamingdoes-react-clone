@@ -9,7 +9,7 @@ import popularContent from './popular-section.js';
 
 const PopularSection = () => {
     return (
-        <div className='bg-white pt-16 pb-6 max-xl:pb-16 border-b-2'>
+        <div className='bg-white pt-16 pb-6 max-xl:pb-16 border-b-2 overflow-hidden'>
             <div className='max-w-[1332px] mx-auto px-4'>
                 <div className='px-[70px] max-2xl:px-10 max-xl:px-5 max-lg:px-2'>
                     <h2 className='font-bold text-transparent uppercase text-xl bg-main-blue-linear bg-clip-text w-fit'>THIS WEEK'S POPULAR</h2>
@@ -30,7 +30,7 @@ const PopularSection = () => {
                                 spaceBetween: 40,
                             }
                         }}
-                        className='mySwiper w-auto pt-2 px-[70px] max-2xl:px-10 max-xl:px-5 max-md:px-2'
+                        className='mySwiper w-auto pt-2 px-[70px] max-2xl:px-10 max-xl:px-5 max-lg:px-2 overflow-visible'
                     >
                         {popularContent.map((data, index) => (
                             <SwiperSlide key={index} className='max-w-[250px] min-w-[200px] w-full'>
