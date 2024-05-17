@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaChevronUp } from "react-icons/fa6";
 import logo from '../../assets/images/logo_main.svg'
 import { SocialMenu } from '../Header/SocialMenu';
@@ -6,6 +6,13 @@ import { FaFacebook, FaYoutube, FaTiktok, FaInstagram, FaTwitter, FaDiscord } fr
 import mario from '../../assets/images/mario_footer.gif';
 
 const Footer = () => {
+
+    // let width = (window.outerWidth * 100) / 25
+
+    // useEffect(() => {
+    //     console.log(width)
+    // }, [width]);
+
     return (
         <div className='relative overflow-hidden'>
             <div className='w-full flex justify-center items-center py-[60px] max-xl:py-12'>

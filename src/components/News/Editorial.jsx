@@ -2,14 +2,14 @@ import React from 'react'
 
 const Editorial = () => {
     return (
-        <div className='font-prompt bg-[#f2faff] max-xl:py-6 max-lg:-mx-14'>
+        <div className='font-prompt bg-[#f2faff] max-xl:py-6 max-xl:pr-6'>
             <div className='pt-6'>
-                <h2 className='text-[22px] text-main-blue font-bold uppercase text-center'>Editorial</h2>
+                <h2 className='text-[22px] text-main-blue font-bold uppercase text-center max-xl:text-start max-xl:pl-[15%] max-lg:pl-[17%]'>Editorial</h2>
             </div>
-            <div className='pb-6'>
+            <div className='pb-6 pl-4'>
                 <div className='pt-6'>
                     <a className='flex hover:text-main-blue' href="#">
-                        <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
+                        <div className='basis-[24%] max-xl:basis-[15%] text-center text-4xl font-semibold text-main-blue'>
                             1
                         </div>
                         <div className='basis-[76%] border-b-2 pb-4'>
@@ -19,7 +19,7 @@ const Editorial = () => {
                 </div>
                 <div className='pt-6'>
                     <a className='flex hover:text-main-blue' href="#">
-                        <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
+                        <div className='basis-[24%] max-xl:basis-[15%] text-center text-4xl font-semibold text-main-blue'>
                             2
                         </div>
                         <div className='basis-[76%] border-b-2 pb-4'>
@@ -29,7 +29,7 @@ const Editorial = () => {
                 </div>
                 <div className='pt-6'>
                     <a className='flex hover:text-main-blue' href="#">
-                        <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
+                        <div className='basis-[24%] max-xl:basis-[15%] text-center text-4xl font-semibold text-main-blue'>
                             3
                         </div>
                         <div className='basis-[76%] border-b-2 pb-4'>
@@ -39,7 +39,7 @@ const Editorial = () => {
                 </div>
                 <div className='pt-6'>
                     <a className='flex hover:text-main-blue' href="#">
-                        <div className='basis-[24%] text-center text-4xl font-semibold text-main-blue'>
+                        <div className='basis-[24%] max-xl:basis-[15%] text-center text-4xl font-semibold text-main-blue'>
                             4
                         </div>
                         <div className='basis-[76%]'>

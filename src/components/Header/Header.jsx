@@ -8,8 +8,7 @@ import './header.css';
 const Header = () => {
 
     const [stickyNav, setStickyNav] = useState(false);
-    const [stickyPositionNav, setStickyPositionNav] = useState(false);
-
+    
     const [scrollDetail, setScrollDetail] = useState({
         scrollDetail: window.scrollY
     })
