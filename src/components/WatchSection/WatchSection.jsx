@@ -71,7 +71,7 @@ const WatchSection = () => {
                 <div className='px-[70px] max-2xl:px-10 max-xl:px-6 max-md:px-2'>
                     <div>
                         <div className='flex max-lg:pr-0 w-full justify-between items-center'>
-                            <h2 className='font-bold text-transparent uppercase text-4xl text-white'>Watch</h2>
+                            <h2 className='font-bold text-transparent uppercase text-4xl text-white max-md:text-3xl'>Watch</h2>
                             <ButtonTransition textBtn={'Watch More'} textColor={true}/>
                         </div>
                     </div>  

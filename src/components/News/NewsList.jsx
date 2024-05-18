@@ -5,7 +5,7 @@ const NewsList = () => {
     return (
             <div className=''>
                 {newsDetails.map((data, index) => (
-                    <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6`} key={index}>
+                    <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6 max-md:flex max-md:flex-col`} key={index}>
                         <div className='basis-auto relative'>
                             <a href="#">
                                 <img className='w-full h-full object-cover' src={data.img} alt="" />

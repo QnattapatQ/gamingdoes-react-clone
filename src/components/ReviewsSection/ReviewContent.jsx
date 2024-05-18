@@ -17,7 +17,7 @@ const ReviewContent = () => {
                     <a href="#" className='group/textblue'>
                         <div>
                             <div className='flex justify-between items-start w-full'>
-                                <h2 className='text-[28px] max-2xl:text-[22px] font-semibold w-[80%] group-hover/textblue:text-main-blue'>พรีวิว Honkai: Star Rail (CBT2) การผจญภัยครั้งแรกของผู้บุกเบิกโดยมีมนุษยชาติเป็นเดิมพัน</h2>
+                                <h2 className='text-[28px] max-2xl:text-[22px] font-semibold w-[80%] group-hover/textblue:text-main-blue line-clamp-3'>พรีวิว Honkai: Star Rail (CBT2) การผจญภัยครั้งแรกของผู้บุกเบิกโดยมีมนุษยชาติเป็นเดิมพัน</h2>
                                 <div className='text-white font-medium text-xs bg-main-blue px-2 py-1'>
                                     9.7
                                     <div className='relative'>
@@ -28,7 +28,7 @@ const ReviewContent = () => {
                                 </div>
                             </div>
                             <div>
-                                <p className='text-sm mt-2'>
+                                <p className='text-sm mt-2 line-clamp-5'>
                                     Honkai: Star Rail เป็นผลงานเกมกาชาล่าสุดของ HoYoverse ซึ่งเป็นเกมแรกของค่ายที่ สร้างแนว RPG Tactical ผลัดเทิร์น 
                                     แล้วเนื่องจากเนื้อหาเกมมีส่วนเกี่ยวข้องกับจักรวาล Honkai Impact 3rd รวมถึงพัฒนาโดยทีมผู้สร้างเดียวกับ 
                                     Genshin Impact ก็ทำให้เกมนี้ได้รับความ สนใจจากชาวเกมเมอร์หลายคน
@@ -40,11 +40,19 @@ const ReviewContent = () => {
                 </div>
                 <div className=''>
                     {newsDetails.map((data, index) => (
-                        <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6`} key={index}>
+                        <div className={`${ index + 1 === newsDetails.length ? 'border-b-0' : 'border-b-2'} grid grid-cols-[auto_auto] border-dashed relative gap-6 w-full max-w-[960px] pb-6 mb-6 max-md:flex max-md:flex-col`} key={index}>
                             <div className='basis-auto relative'>
                                 <a href="#">
                                     <img className='w-full h-full object-cover' src={data.img} alt="" />
                                 </a>
+                                <div className='text-white font-medium text-xs bg-main-blue px-2 py-1 absolute right-0 top-0'>
+                                    9.7
+                                    <div className='relative'>
+                                        <div className='bg-main-blue w-[8px] h-[8px] absolute skew-x-[40deg] -top-[20px] -left-[10px]'>
+                                                                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className='flex flex-col h-full justify-between font-prompt'>
                                 <a href="#">
