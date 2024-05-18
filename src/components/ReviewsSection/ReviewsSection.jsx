@@ -24,7 +24,7 @@ const ReviewsSection = () => {
                                     <div className='max-w-[25%] max-xl:max-w-[100%] w-full basis-auto max-2xl:max-w-full max-xl:py-6 max-xl:mt-12 max-2xl:pr-6 max-lg:pr-0'>
                                         <div className='bg-[#F2FAFF] py-6 relative max-lg:-mx-[auto]'>
                                             <div>
-                                                <h2 className='uppercase px-6 font-bold text-lg first:text-[#121D76] text-nowrap'>Top Chart</h2>
+                                                <h2 className='uppercase px-6 font-bold text-lg first:text-[#121D76] text-nowrap line-clamp-1'>Top Chart</h2>
                                             </div>
                                             <div className='px-6'>
                                                 {gameName.map((data, index) => (

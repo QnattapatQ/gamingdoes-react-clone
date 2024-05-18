@@ -1,5 +1,3 @@
-import ResponsiveSize from '../public/ResponsiveSize'
-import BackdropBG from './components/BackdropBG/BackdropBG'
 import Header from './components/Header/Header.jsx'
 import TopBannerAds from './components/Header/TopBanner'
 import HeroSection from './components/HeroSection/HeroSection'
@@ -13,8 +11,9 @@ import ReviewsSection from './components/ReviewsSection/ReviewsSection'
 import Footer from './components/Footer/Footer'
 
 function App() {
+
     return (
-        <div>
+        <div> 
             <TopBannerAds/>
             <Header/>
             <HeroSection/>

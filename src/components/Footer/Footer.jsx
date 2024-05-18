@@ -1,17 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState , useRef } from 'react'
 import { FaChevronUp } from "react-icons/fa6";
 import logo from '../../assets/images/logo_main.svg'
 import { SocialMenu } from '../Header/SocialMenu';
 import { FaFacebook, FaYoutube, FaTiktok, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa6";
 import mario from '../../assets/images/mario_footer.gif';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Footer = () => {
 
-    // let width = (window.outerWidth * 100) / 25
+    gsap.registerPlugin(useGSAP);
 
-    // useEffect(() => {
-    //     console.log(width)
-    // }, [width]);
+    const [desktopSize, setDesktopSize] = useState({
+        winWidth: window.innerWidth
+    })
+
+    const detechSize = () => {
+        setDesktopSize({
+            winWidth: window.innerWidth
+        })
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', detechSize);
+
+        gsap.fromTo('.mario', desktopSize.winWidth / 100 ,{x:-desktopSize.winWidth / 10},{x:(desktopSize.winWidth - (100 / 20)), repeat:-1 ,ease:'none'});
+
+        // console.log(desktopSize.winWidth)
+
+        return () => {
+            window.removeEventListener('resize', detechSize);
+        }
+    }, [desktopSize.winWidth]);
+
 
     return (
         <div className='relative overflow-hidden'>
@@ -29,7 +50,7 @@ const Footer = () => {
                         <div className='block w-[110px]'>
                             <img src={logo} alt="" />
                         </div>
-                        <div className='py-[50px] flex items-start justify-between max-lg:items-end border-b border-white'>
+                        <div className='py-[50px] flex items-start justify-between gap-4 max-lg:items-end max-md:flex-col max-md:items-start border-b border-white'>
                             <div>
                                 <ul className='flex gap-8 max-2xl:gap-6 items-center max-xl:grid max-xl:grid-cols-2 max-lg:grid-cols-1'>
                                     <li>
@@ -49,8 +70,8 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
-                                <h2 className='text-white uppercase font-medium text-sm mb-1 max-lg:text-end'>Contact Us</h2>
+                            <div className='max-md:mt-2'>
+                                <h2 className='text-white uppercase font-medium text-sm mb-1 max-lg:text-end max-md:text-start'>Contact Us</h2>
                                 <a className='text-gray-400 hover:text-white font-medium' href="#">
                                     gene@gamingdose.com
                                 </a>
@@ -65,22 +86,22 @@ const Footer = () => {
                                     © 2022 GamingDose.com
                                 </p>
                             </div>
-                            <div>
+                            <div className='w-auto'>
                                 <div className='social-wrapper flex items-center justify-center gap-3 max-md:pt-4'>
-                                    <a className='text-white inline-block w-full' href="#"><FaFacebook className='social-option text-2xl'/></a>
-                                    <a className='text-white inline-block w-full' href="#"><FaYoutube className='social-option text-2xl'/></a>
-                                    <a className='text-white inline-block w-full' href="#"><FaTiktok className='social-option text-2xl'/></a>
-                                    <a className='text-white inline-block w-full' href="#"><FaInstagram className='social-option text-2xl'/></a>
-                                    <a className='text-white inline-block w-full' href="#"><FaTwitter className='social-option text-2xl'/></a>
-                                    <a className='text-white inline-block w-full' href="#"><FaDiscord className='social-option text-2xl'/></a>
+                                    <a className='text-white inline-block w-full' href="#"><FaFacebook className='social-option text-2xl max-sm:text-xl'/></a>
+                                    <a className='text-white inline-block w-full' href="#"><FaYoutube className='social-option text-2xl max-sm:text-xl'/></a>
+                                    <a className='text-white inline-block w-full' href="#"><FaTiktok className='social-option text-2xl max-sm:text-xl'/></a>
+                                    <a className='text-white inline-block w-full' href="#"><FaInstagram className='social-option text-2xl max-sm:text-xl'/></a>
+                                    <a className='text-white inline-block w-full' href="#"><FaTwitter className='social-option text-2xl max-sm:text-xl'/></a>
+                                    <a className='text-white inline-block w-full' href="#"><FaDiscord className='social-option text-2xl max-sm:text-xl'/></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='absolute top-[110px] w-full'>
-                <img className='w-[50px] animate-mario-move' src={mario} alt="" />
+            <div className='absolute top-[110px] max-xl:top-[86px] w-full'>
+                <img className='mario w-[50px]' src={mario} alt="" />
             </div>
         </div>
     )
