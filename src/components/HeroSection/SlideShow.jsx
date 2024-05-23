@@ -57,7 +57,7 @@ const SlideShow = ({ getIndex }) => {
                                 <div className='w-full h-full relative'>
                                     <div className='absolute bg-blue-linear inset-0 max-lg:hidden'></div>
                                     <div className='h-full max-lg:flex max-lg:justify-between max-lg:flex-col max-lg:gap-4'>
-                                        <div className=''>
+                                        <div className='max-md:-mb-[8%]'>
                                             <div className='absolute pt-[60px] w-[58%] pl-[60px] max-2xl:pl-[40px] max-xl:w-[68%] max-xl:pt-[48px] max-xl:pl-[24px] max-lg:static max-lg:w-full max-lg:pl-4 max-lg:pt-4 max-lg:pr-4'>
                                                 <h2 className='text-[40px] font-medium max-2xl:text-[28px] txt-mitr leading-[1.4] max-lg:text-[26px]'>{data.textContent}</h2>
                                             </div>
