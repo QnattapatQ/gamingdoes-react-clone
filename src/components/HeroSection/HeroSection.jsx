@@ -20,12 +20,12 @@ const HeroSection = () => {
                             <div className='border-solid border-[0.5px] border-gray-400 bg-gray-400 backdrop-filter backdrop-blur-md bg-opacity-30 h-full p-[4.668%] flex flex-col gap-4 max-lg:flex-row max-lg:p-4'>
                                 <div className='h-full'>
                                     <a href="#">
-                                        <img className='h-full object-cover' src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_side01.jpg" alt="" />
+                                        <img src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_side01.jpg" alt="" />
                                     </a>
                                 </div>
                                 <div className='h-full'>
                                     <a href="#">
-                                        <img className='h-full object-cover' src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_side02.jpg" alt="" />
+                                        <img src="https://spicy-dev.com/preview/1dd/gamingdose/assets/images/ads_side02.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
